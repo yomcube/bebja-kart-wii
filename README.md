@@ -3,7 +3,7 @@
 - [ ] [Colored Minimaps / Speedometer (Toggable Option)
 - [ ] An Input Display from MKW-SP (Toggable Option)
 - [ ] Switching Languages through different Config.puls (Toggable Option)
-- [x] Brake Drifting
+- [x] ~~Brake Drifting~~
 - [ ] CC Changes (Normal, 300CC, 500CC, 1000CC) (Toggable)
 - [ ] That Option to change between Inside and Outside Drift Variety Pack has
 - [ ] The Volume Controls from MKW-SP
