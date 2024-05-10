@@ -1,10 +1,12 @@
 # bebja-kart-wii
-## TODO
-- [x] [Show Battle Map Icons](https://mariokartwii.com/showthread.php?tid=1840)
+- [x] [Show Battle Map Icons [CLF78]](https://mariokartwii.com/showthread.php?tid=1840)
+- [x] [Allow Looking Backwards During Respawn [Ro]](https://mariokartwii.com/showthread.php?tid=2128)
+- [x] [Allow looking backwards during the countdown [Gaberboo]](https://mariokartwii.com/showthread.php?tid=2109)
+- [x] [Can Always Drift [Supastarrio]](https://mariokartwii.com/showthread.php?tid=214) 
+- [x] Brake Drifting
 - [ ] Colored Minimaps / Speedometer (Toggable Option)
 - [ ] An Input Display from MKW-SP (Toggable Option)
 - [ ] Switching Languages through different Config.puls (Toggable Option)
-- [x] ~~Brake Drifting~~
 - [ ] CC Changes (Normal, 300CC, 500CC, 1000CC) (Toggable)
 - [ ] That Option to change between Inside and Outside Drift Variety Pack has
 - [ ] The Volume Controls from MKW-SP
