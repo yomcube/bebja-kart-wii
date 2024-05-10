@@ -93,5 +93,9 @@ kmCall(0x807ef3e0, ChangeItemWindowPane);
 kmCall(0x807ef444, ChangeItemWindowPane);
 
 kmWrite24(0x808A9FF3, 'PUL');
+
+//Show Battle Map Icons [CLF78]
+kmWrite8(0x8088BFF7, 1);
+
 }//namespace Race
 }//namespace Pulsar

@@ -1,5 +1,6 @@
 # bebja-kart-wii
 ## TODO
+- [x] [Show Battle Map Icons](https://mariokartwii.com/showthread.php?tid=1840)
 - [ ] Colored Minimaps / Speedometer (Toggable Option)
 - [ ] An Input Display from MKW-SP (Toggable Option)
 - [ ] Switching Languages through different Config.puls (Toggable Option)
