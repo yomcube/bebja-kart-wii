@@ -21,3 +21,14 @@
 - [ ] Disable HUD (Toggable)
 - [ ] Homebrew Updater (Like OptPack)
 - [ ] Custom Wii Channel
+- [ ] (Accurate Explosion Damage [MrBean, CLF78]) (https://mariokartwii.com/showthread.php?tid=1857)
+- [ ] (Silent Controller Changing [Bully]) (https://mariokartwii.com/showthread.php?tid=164) (toggable)
+- [ ] (Allow Mega in a Mega [Unnamed]) (https://mariokartwii.com/showthread.php?tid=1939)
+- [ ] (Better Bullet Bill Curve Tightness [davidevgen]) (https://mariokartwii.com/showthread.php?tid=196)
+- [ ] (No Bullet Bill Icon [Anarion]) (https://mariokartwii.com/showthread.php?tid=170)
+- [ ] (Faster Points Increase [CLF78]) (https://mariokartwii.com/showthread.php?tid=1858)
+- [ ] (Never Burn Out [JoshuaMK]) (https://mariokartwii.com/showthread.php?tid=1367)
+- [ ] (Allow All Vehicles in Battle Mode [Nameless / Scruffy]) (https://mariokartwii.com/showthread.php?tid=2081)
+- [ ] (Show Minimap Topography [Mu1hwu]) (https://mariokartwii.com/showthread.php?tid=2066)
+- [ ] (Disable Low Battery Notification [Diamond]) (https://mariokartwii.com/showthread.php?tid=1645)
+- [ ] 
