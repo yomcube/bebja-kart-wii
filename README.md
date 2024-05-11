@@ -31,4 +31,4 @@
 - [ ] (Allow All Vehicles in Battle Mode [Nameless / Scruffy]) (https://mariokartwii.com/showthread.php?tid=2081)
 - [ ] (Show Minimap Topography [Mu1hwu]) (https://mariokartwii.com/showthread.php?tid=2066)
 - [ ] (Disable Low Battery Notification [Diamond]) (https://mariokartwii.com/showthread.php?tid=1645)
-- [ ] 
+- [ ] Remove Mushroom Bugs [Vega] (https://mariokartwii.com/showthread.php?tid=909)
