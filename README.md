@@ -17,6 +17,7 @@
 - [ ] [Show Minimap Topography [Mu1hwu]](https://mariokartwii.com/showthread.php?tid=2066)
 - [ ] [Disable Low Battery Notification [Diamond]](https://mariokartwii.com/showthread.php?tid=1645)
 - [ ] [Remove Mushroom Bug [Vega]](https://mariokartwii.com/showthread.php?tid=909)
+- [ ] Local Multiplayer Time Trials
 
 ## C2 Codes
 - [ ] [Mirror Mode TTs](https://mariokartwii.com/showthread.php?tid=1981) (Toggable)
