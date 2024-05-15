@@ -94,17 +94,5 @@ kmCall(0x807ef444, ChangeItemWindowPane);
 
 kmWrite24(0x808A9FF3, 'PUL');
 
-//Show Battle Map Icons [CLF78]
-kmWrite8(0x8088BFF7, 1);
-
-//Allow Looking Backwards During Respawn [Ro]
-kmWrite32(0x805A228C, 0x60000000);
-
-//Allow looking backwards during the countdown [Gaberboo]
-kmWrite32(0x805A225C, 0x38800001);
-
-//Can Always Drift [Supastarrio]
-kmWrite32(0x808B5B1C, 0);
-
 }//namespace Race
 }//namespace Pulsar
