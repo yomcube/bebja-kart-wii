@@ -18,7 +18,6 @@
 - [ ] [Remove Mushroom Bug [Vega]](https://mariokartwii.com/showthread.php?tid=909)
 - [ ] [Silent Controller Changer [Bully]](https://mariokartwii.com/showthread.php?tid=164) (Toggable)
 - [ ] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60) (Toggable)
-- [ ] [Silent Controller Changing [Bully]](https://mariokartwii.com/showthread.php?tid=164) (toggable)
 
 ## C2 Codes
 - [ ] [Items on Minimap](https://mariokartwii.com/showthread.php?tid=1896)
