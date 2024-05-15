@@ -42,4 +42,3 @@
 - [ ] Colored Minimaps / Speedometer (Toggable Option)
 - [ ] An Input Display from MKW-SP (Toggable Option)
 
-## Unsorted
