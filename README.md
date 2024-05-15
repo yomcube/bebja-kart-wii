@@ -41,3 +41,5 @@
 - [ ] CC Changes (Normal, 300CC, 500CC, 1000CC) (Toggable)
 - [ ] Colored Minimaps / Speedometer (Toggable Option)
 - [ ] An Input Display from MKW-SP (Toggable Option)
+
+## Unsorted
