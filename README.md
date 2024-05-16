@@ -50,4 +50,4 @@
 
 ## GCT
 - [ ] [Can Always Drift [Supastarrio]](https://mariokartwii.com/showthread.php?tid=214) 
-- [ ] Hybrid Drift
+- [ ] [Hybrid Drift v2.0 [Ismy, CLF78]](https://mariokartwii.com/showthread.php?tid=1933)
