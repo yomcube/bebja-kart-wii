@@ -10,12 +10,13 @@
 - [x] [Allow Mega in a Mega [Unnamed]](https://mariokartwii.com/showthread.php?tid=1939)
 - [x] [Better Bullet Bill Curve Tightness [davidevgen]](https://mariokartwii.com/showthread.php?tid=196)
 - [x] [No Bullet Bill Icon [Anarion]](https://mariokartwii.com/showthread.php?tid=170)
-- [x] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
 - [x] [Never Burn Out [JoshuaMK]](https://mariokartwii.com/showthread.php?tid=1367)
 - [x] [Allow All Vehicles in Battle Mode [Nameless / Scruffy]](https://mariokartwii.com/showthread.php?tid=2081)
 - [x] [Show Minimap Topography [Mu1hwu]](https://mariokartwii.com/showthread.php?tid=2066)
 - [x] [Disable Low Battery Notification [Diamond]](https://mariokartwii.com/showthread.php?tid=1645)
 - [x] [Remove Mushroom Bug [Vega]](https://mariokartwii.com/showthread.php?tid=909)
+### Doesn't work
+- [x] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
 
 ### Toggable
 - [ ] [Silent Controller Changer [Bully]](https://mariokartwii.com/showthread.php?tid=164)
