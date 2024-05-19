@@ -1,6 +1,6 @@
 # bebja-kart-wii
 ## Unsorted
-
+- [ ] [Accurate Item Roulete [Pulsar Discord] (https://discord.com/channels/1207775700883476580/1219695845583093902)
 
 ## Simple Memory Patches
 - [x] [Show Battle Map Icons [CLF78]](https://mariokartwii.com/showthread.php?tid=1840)
