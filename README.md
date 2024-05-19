@@ -1,6 +1,5 @@
 # bebja-kart-wii
 ## Unsorted
-- [ ] [Accurate Item Roulete [Pulsar Discord] (https://discord.com/channels/1207775700883476580/1219695845583093902)
 
 ## Simple Memory Patches
 - [x] [Show Battle Map Icons [CLF78]](https://mariokartwii.com/showthread.php?tid=1840)
@@ -33,7 +32,11 @@
 ### Toggable
 - [ ] Switching Languages through different Config.puls
 - [ ] Multiple Fonts
-
+## Pulsar Mods
+- [ ] [Accurate Item Roulete [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/Roulette.cpp)
+## GCT
+- [ ] [Can Always Drift [Supastarrio]](https://mariokartwii.com/showthread.php?tid=214) 
+- [ ] [Hybrid Drift v2.0 [Ismy, CLF78]](https://mariokartwii.com/showthread.php?tid=1933)
 ## Other
 - [x] 200cc Brake Drifting in all CCs
 - [ ] Homebrew Updater (Like OptPack)
@@ -48,7 +51,3 @@
 - [ ] Colored Minimaps / Speedometer
 - [ ] An Input Display from MKW-SP
 - [ ] Load between different Music Packs (CTBRSTM)
-
-## GCT
-- [ ] [Can Always Drift [Supastarrio]](https://mariokartwii.com/showthread.php?tid=214) 
-- [ ] [Hybrid Drift v2.0 [Ismy, CLF78]](https://mariokartwii.com/showthread.php?tid=1933)
