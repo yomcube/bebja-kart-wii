@@ -15,7 +15,6 @@
 - [x] [Disable Low Battery Notification [Diamond]](https://mariokartwii.com/showthread.php?tid=1645)
 - [x] [Remove Mushroom Bug [Vega]](https://mariokartwii.com/showthread.php?tid=909)
 ### Doesn't work
-- [x] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
 
 ### Toggable
 - [ ] [Silent Controller Changer [Bully]](https://mariokartwii.com/showthread.php?tid=164)
@@ -37,6 +36,8 @@
 ## GCT
 - [ ] [Can Always Drift [Supastarrio]](https://mariokartwii.com/showthread.php?tid=214) 
 - [ ] [Hybrid Drift v2.0 [Ismy, CLF78]](https://mariokartwii.com/showthread.php?tid=1933)
+- [x] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
+
 ## Other
 - [x] 200cc Brake Drifting in all CCs
 - [ ] Homebrew Updater (Like OptPack)
