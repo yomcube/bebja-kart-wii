@@ -1,5 +1,6 @@
 # bebja-kart-wii
 ## Unsorted
+- [ ] Make ZL Button Wheelie Button (If that's possible)
 
 ## Simple Memory Patches
 - [x] [Show Battle Map Icons [CLF78]](https://mariokartwii.com/showthread.php?tid=1840)
