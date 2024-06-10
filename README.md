@@ -22,6 +22,7 @@
 - [ ] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
 
 ## C2 Codes
+- [ ] [Enhanced Start Line (LE-CODE replica) [Kazuki]](https://mariokartwii.com/showthread.php?tid=1790)
 - [ ] [Items on Minimap](https://mariokartwii.com/showthread.php?tid=1896)
 - [ ] [Item Rain (v1.5) [MrBean]](https://mariokartwii.com/showthread.php?tid=396)
 ### Toggable
