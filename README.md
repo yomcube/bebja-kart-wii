@@ -3,6 +3,7 @@
 - [ ] Make ZL Button Wheelie Button (If that's possible)
 
 ## Simple Memory Patches
+- [ ] [Remove Worldwide Option [Chadderz]](https://mariokartwii.com/showthread.php?tid=994)
 - [x] [Show Battle Map Icons [CLF78]](https://mariokartwii.com/showthread.php?tid=1840)
 - [x] [Allow Looking Backwards During Respawn [Ro]](https://mariokartwii.com/showthread.php?tid=2128)
 - [x] [Allow looking backwards during the countdown [Gaberboo]](https://mariokartwii.com/showthread.php?tid=2109)
