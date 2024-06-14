@@ -19,6 +19,7 @@
 ### Doesn't work
 
 ### Toggable
+- [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482) + [No Voice Sounds (Online) [davidevgen]](https://mariokartwii.com/showthread.php?tid=483)
 - [ ] [Silent Controller Changer [Bully]](https://mariokartwii.com/showthread.php?tid=164)
 - [ ] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
 
