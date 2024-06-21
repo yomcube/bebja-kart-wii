@@ -41,7 +41,7 @@
 - [ ] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
 
 ## Other
-- [ ] 200cc Brake Drifting in all CCs
+- [x] 200cc Brake Drifting in all CCs
 - [ ] Homebrew Updater (Like OptPack)
 - [ ] Custom Wii Channel
 - [ ] [TTs Online](https://wiki.tockdom.com/wiki/TTs_Online)
