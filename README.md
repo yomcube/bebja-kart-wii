@@ -1,6 +1,5 @@
 # bebja-kart-wii
 ## Unsorted
-- [ ] Make ZL Button Wheelie Button (If that's possible)
 
 ## Simple Memory Patches
 - [x] [Remove Worldwide Option [Chadderz]](https://mariokartwii.com/showthread.php?tid=994)
@@ -49,6 +48,7 @@
 - [ ] That Option to change between Inside and Outside Drift Variety Pack has
 - [ ] The Volume Controls from MKW-SP
 - [ ] Local Multiplayer Time Trials
+- [ ] Make ZL Button Wheelie Button (If that's possible)
 ### Toggable
 - [ ] CC Changes (Normal, 300CC, 500CC, 1000CC)
 - [ ] Colored Minimaps / Speedometer
