@@ -3,7 +3,7 @@
 - [ ] Make ZL Button Wheelie Button (If that's possible)
 
 ## Simple Memory Patches
-- [ ] [Remove Worldwide Option [Chadderz]](https://mariokartwii.com/showthread.php?tid=994)
+- [x] [Remove Worldwide Option [Chadderz]](https://mariokartwii.com/showthread.php?tid=994)
 - [x] [Show Battle Map Icons [CLF78]](https://mariokartwii.com/showthread.php?tid=1840)
 - [x] [Allow Looking Backwards During Respawn [Ro]](https://mariokartwii.com/showthread.php?tid=2128)
 - [x] [Allow looking backwards during the countdown [Gaberboo]](https://mariokartwii.com/showthread.php?tid=2109)
@@ -16,8 +16,6 @@
 - [x] [Show Minimap Topography [Mu1hwu]](https://mariokartwii.com/showthread.php?tid=2066)
 - [x] [Disable Low Battery Notification [Diamond]](https://mariokartwii.com/showthread.php?tid=1645)
 - [x] [Remove Mushroom Bug [Vega]](https://mariokartwii.com/showthread.php?tid=909)
-### Doesn't work
-
 ### Toggable
 - [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482) + [No Voice Sounds (Online) [davidevgen]](https://mariokartwii.com/showthread.php?tid=483)
 - [ ] [Silent Controller Changer [Bully]](https://mariokartwii.com/showthread.php?tid=164)
@@ -36,14 +34,14 @@
 - [ ] Switching Languages through different Config.puls
 - [ ] Multiple Fonts
 ## Pulsar Mods
-- [ ] [Accurate Item Roulete [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/Roulette.cpp)
+- [x] [Accurate Item Roulete [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/Roulette.cpp)
 ## GCT
 - [ ] [Can Always Drift [Supastarrio]](https://mariokartwii.com/showthread.php?tid=214) 
 - [ ] [Hybrid Drift v2.0 [Ismy, CLF78]](https://mariokartwii.com/showthread.php?tid=1933)
-- [x] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
+- [ ] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
 
 ## Other
-- [x] 200cc Brake Drifting in all CCs
+- [ ] 200cc Brake Drifting in all CCs
 - [ ] Homebrew Updater (Like OptPack)
 - [ ] Custom Wii Channel
 - [ ] [TTs Online](https://wiki.tockdom.com/wiki/TTs_Online)
