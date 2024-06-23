@@ -1,5 +1,6 @@
 # bebja-kart-wii
 ## Unsorted
+- [ ] Make Minimap Toggable
 
 ## Simple Memory Patches
 - [x] [Remove Worldwide Option [Chadderz]](https://mariokartwii.com/showthread.php?tid=994)
