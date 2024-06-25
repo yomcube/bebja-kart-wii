@@ -1,0 +1,37 @@
+name: 'Build'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+concurrency:
+  group: '${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Get CW
+        run: |
+          mkdir CW
+          cd CW
+          curl -O "https://raw.githubusercontent.com/Newer-Team/NewerSMBW/cw/extractCW.sh"
+          curl -o "CW55xx_v2_10_SE.exe" "http://cache.nxp.com/lgfiles/devsuites/PowerPC/CW55xx_v2_10_SE.exe?WT_TYPE=IDE%20-%20Debug,%20Compile%20and%20Build%20Tools&WT_VENDOR=FREESCALE&WT_FILE_FORMAT=exe&WT_ASSET=Downloads&fileExt=.exe"
+          chmod +x "extractCW.sh"
+          ./extractCW.sh
+          
+      - name: Build BKW
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+
+
+          
