@@ -51,7 +51,7 @@
 - [ ] Local Multiplayer Time Trials
 - [ ] Make ZL Button Wheelie Button (If that's possible)
 
-- [ ] Website to Upload / Download Ghosts
+- [ ] Program to Upload / Download Ghosts
 ### Toggable
 - [ ] CC Changes (Normal, 300CC, 500CC, 1000CC)
 - [ ] Colored Minimaps / Speedometer
