@@ -21,7 +21,7 @@ jobs:
       
       - name: Install packages
         run: |
-          dpkg --add-architecture i386 && apt-get update
+          sudo dpkg --add-architecture i386 && apt-get update
           sudo apt-get -y install cabextract wine wine32
         
       - name: Get CW
