@@ -20,7 +20,9 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Install packages
-        run: sudo apt-get -y install cabextract wine
+        run: |
+          dpkg --add-architecture i386 && apt-get update
+          sudo apt-get -y install cabextract wine wine32
         
       - name: Get CW
         run: |
@@ -59,3 +61,9 @@ jobs:
 
       - name: Build BKW
         run: DISPLAY= wine cmd build_actions.bat
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Code.pul
+          path: Code.pul
