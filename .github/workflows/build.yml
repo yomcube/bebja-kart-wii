@@ -64,7 +64,7 @@ jobs:
           cd ..
 
       - name: Build BKW
-        run: DISPLAY= wine cmd build_actions.bat
+        run: DISPLAY= wine build_actions.bat
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
