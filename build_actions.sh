@@ -1,9 +1,7 @@
 #!/usr/bin/bash
 mkdir BKW_
-for f in * **; do
-	mv "$f" "BKW_/$f"
-done
-git clone "https://github.com/MelgMKW/Pulsar.git"
+mv -t BKW_ *
+git clone "https://github.com/MelgMKW/Pulsar.git" Pulsar
 cd BKW_
 mv BKW ../Pulsar/BKW
 mv -f PulsarEngine/200cc.cpp ../PulsarEngine/Race/200cc.cpp
