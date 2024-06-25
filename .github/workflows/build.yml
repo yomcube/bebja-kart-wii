@@ -29,6 +29,7 @@ jobs:
 
       - name: Extract CW
         run: |
+          cd CW
           expand CW55xx_v2_10_SE.exe -F:Data1.cab Data1.cab
           expand Data1.cab -F:lmgr11.dll lmgr11.dll
           expand Data1.cab -F:lmgr8c.dll lmgr8c.dll
@@ -42,6 +43,7 @@ jobs:
           expand Data1.cab -F:_87844F06D94541B3B62E7A69C029A35D CLT_EABI_PPC_Tools_Notes.txt
           expand Data1.cab -F:_6F672001C92D4DF8B1893652C3B19743 CLT_Usage_Notes.txt
           del Data1.cab
+          cd ..
 
       - name: Build BKW
         run: build_actions.bat
