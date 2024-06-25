@@ -58,4 +58,4 @@ jobs:
           cd ..
 
       - name: Build BKW
-        run: wine build_actions.bat
+        run: wine cmd build_actions.bat
