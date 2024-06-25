@@ -16,7 +16,7 @@ CPPFILES=""
 
 rm -rf build
 mkdir build
-"$CC" "$CFLAGS" -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
+$CC "$CFLAGS" -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
 
 OBJECTS=
 for f in BKW/**.cpp; do
