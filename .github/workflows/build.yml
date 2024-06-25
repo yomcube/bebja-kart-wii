@@ -33,23 +33,23 @@ jobs:
           expand /F:lmgr11.dll Data1.cab
           expand /F:lmgr8c.dll Data1.cab
           expand /F:_44CD8EA541F44E56801091477F3DC9AA Data1.cab
-          rename _44CD8EA541F44E56801091477F3DC9AA license.dat
+          move _44CD8EA541F44E56801091477F3DC9AA license.dat
           expand /F:_4C8ADA37887647F5955B4FB0F716277F Data1.cab
-          rename _4C8ADA37887647F5955B4FB0F716277F mwcceppc.exe
+          move _4C8ADA37887647F5955B4FB0F716277F mwcceppc.exe
           expand /F:_C63F22BC0503480DAFDCAFC394185CBA Data1.cab
-          rename _C63F22BC0503480DAFDCAFC394185CBA mwasmeppc.exe
+          move _C63F22BC0503480DAFDCAFC394185CBA mwasmeppc.exe
           expand /F:_4901FAD667D24E13BCF700F695CDD6D7 Data1.cab
-          rename _4901FAD667D24E13BCF700F695CDD6D7 mwldeppc.exe
+          move _4901FAD667D24E13BCF700F695CDD6D7 mwldeppc.exe
           expand /F:_112A80A88B6147C590AE2CD9AE3F354F Data1.cab
-          rename _112A80A88B6147C590AE2CD9AE3F354F mwcceppc.txt
+          move _112A80A88B6147C590AE2CD9AE3F354F mwcceppc.txt
           expand /F:_39217B1AFC714B7083E6CB5CBB10FC83 Data1.cab
-          rename _39217B1AFC714B7083E6CB5CBB10FC83 mwasmeppc.txt
+          move _39217B1AFC714B7083E6CB5CBB10FC83 mwasmeppc.txt
           expand /F:_312B4591741B497CB5EB342A632170BE Data1.cab
-          rename _312B4591741B497CB5EB342A632170BE mwldeppc.txt
+          move _312B4591741B497CB5EB342A632170BE mwldeppc.txt
           expand /F:_87844F06D94541B3B62E7A69C029A35D Data1.cab
-          rename _87844F06D94541B3B62E7A69C029A35D CLT_EABI_PPC_Tools_Notes.txt
+          move _87844F06D94541B3B62E7A69C029A35D CLT_EABI_PPC_Tools_Notes.txt
           expand /F:_6F672001C92D4DF8B1893652C3B19743 Data1.cab
-          rename _6F672001C92D4DF8B1893652C3B19743 CLT_Usage_Notes.txt
+          move _6F672001C92D4DF8B1893652C3B19743 CLT_Usage_Notes.txt
           del Data1.cab
 
       - name: Build BKW
