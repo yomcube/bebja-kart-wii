@@ -14,59 +14,23 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install packages
-        run: |
-          sudo dpkg --add-architecture i386
-          wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-          sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
-          sudo apt-add-repository "deb https://dl.winehq.org/wine-builds/ubuntu $(lsb_release -cs) main"
-          sudo apt-get install -y --install-recommends winehq-stable
-          sudo apt-get install -y cabextract
         
       - name: Get CW
         run: |
           mkdir CW
-          cd CW
-          curl -O "https://raw.githubusercontent.com/Newer-Team/NewerSMBW/cw/extractCW.sh"
-          curl -o "CW55xx_v2_10_SE.exe" "http://cache.nxp.com/lgfiles/devsuites/PowerPC/CW55xx_v2_10_SE.exe?WT_TYPE=IDE%20-%20Debug,%20Compile%20and%20Build%20Tools&WT_VENDOR=FREESCALE&WT_FILE_FORMAT=exe&WT_ASSET=Downloads&fileExt=.exe"
-          cd ..
-          
-      - name: Extract CW
-        run: |
-          cd CW
-          cabextract -F Data1.cab CW55xx_v2_10_SE.exe
-          cabextract -F lmgr11.dll Data1.cab
-          cabextract -F lmgr8c.dll Data1.cab
-          cabextract -F _44CD8EA541F44E56801091477F3DC9AA Data1.cab
-          mv _44CD8EA541F44E56801091477F3DC9AA license.dat
-          cabextract -F _4C8ADA37887647F5955B4FB0F716277F Data1.cab
-          mv _4C8ADA37887647F5955B4FB0F716277F mwcceppc.exe
-          cabextract -F _C63F22BC0503480DAFDCAFC394185CBA Data1.cab
-          mv _C63F22BC0503480DAFDCAFC394185CBA mwasmeppc.exe
-          cabextract -F _4901FAD667D24E13BCF700F695CDD6D7 Data1.cab
-          mv _4901FAD667D24E13BCF700F695CDD6D7 mwldeppc.exe
-          cabextract -F _112A80A88B6147C590AE2CD9AE3F354F Data1.cab
-          mv _112A80A88B6147C590AE2CD9AE3F354F mwcceppc.txt
-          cabextract -F _39217B1AFC714B7083E6CB5CBB10FC83 Data1.cab
-          mv _39217B1AFC714B7083E6CB5CBB10FC83 mwasmeppc.txt
-          cabextract -F _312B4591741B497CB5EB342A632170BE Data1.cab
-          mv _312B4591741B497CB5EB342A632170BE mwldeppc.txt
-          cabextract -F _87844F06D94541B3B62E7A69C029A35D Data1.cab
-          mv _87844F06D94541B3B62E7A69C029A35D CLT_EABI_PPC_Tools_Notes.txt
-          cabextract -F _6F672001C92D4DF8B1893652C3B19743 Data1.cab
-          mv _6F672001C92D4DF8B1893652C3B19743 CLT_Usage_Notes.txt
-          rm Data1.cab
-          cd ..
+          curl -o CW/license.dat -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/license.dat
+          curl -o CW/lmgr11.dll -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/lmgr11.dll
+          curl -o CW/mwasmeppc.exe -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/mwasmeppc.exe
+          curl -o CW/mwcceppc.exe -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/mwcceppc.exe
+          curl -o CW/mwldeppc.exe -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/mwldeppc.exe
 
       - name: Build BKW
         run: |
-          chmod +x build_actions.sh
-          ./build_actions.sh
+          .\build_actions.bat
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
