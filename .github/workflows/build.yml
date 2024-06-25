@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Install packages
-        run: sudo apt-get -y install cabextract wine
+        run: sudo apt-get -y install cabextract wine32
         
       - name: Get CW
         run: |
