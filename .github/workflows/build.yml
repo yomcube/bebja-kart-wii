@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Install packages
-        run: dpkg --add-architecture i386 && apt-get update && apt-get install cabextract wine32
+        run: sudo apt-get -y install cabextract wine
         
       - name: Get CW
         run: |
@@ -58,4 +58,4 @@ jobs:
           cd ..
 
       - name: Build BKW
-        run: wine cmd build_actions.bat
+        run: DISPLAY= wine cmd build_actions.bat
