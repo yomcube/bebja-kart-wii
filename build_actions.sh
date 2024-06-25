@@ -14,6 +14,3 @@ for f in PulsarEngine/*.cpp PulsarEngine/**/*.cpp; do
 done
 echo "Linking..."
 dotnet "KamekLinker/bin/Debug/net7.0/Kamek.exe" "build/kamek.o" $OBJECTS -dynamic -externals="GameSource/symbols.txt" -versions="GameSource/versions.txt" -output-combined=build/Code.pul
-
-:end
-ENDLOCAL
