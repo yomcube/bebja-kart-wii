@@ -14,10 +14,13 @@ concurrency:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Install packages
+        run: sudo apt-get -y cabextract wine
         
       - name: Get CW
         run: |
@@ -26,24 +29,13 @@ jobs:
           curl -O "https://raw.githubusercontent.com/Newer-Team/NewerSMBW/cw/extractCW.sh"
           curl -o "CW55xx_v2_10_SE.exe" "http://cache.nxp.com/lgfiles/devsuites/PowerPC/CW55xx_v2_10_SE.exe?WT_TYPE=IDE%20-%20Debug,%20Compile%20and%20Build%20Tools&WT_VENDOR=FREESCALE&WT_FILE_FORMAT=exe&WT_ASSET=Downloads&fileExt=.exe"
           cd ..
-
+          
       - name: Extract CW
         run: |
           cd CW
-          expand CW55xx_v2_10_SE.exe -F:Data1.cab Data1.cab
-          expand Data1.cab -F:lmgr11.dll lmgr11.dll
-          expand Data1.cab -F:lmgr8c.dll lmgr8c.dll
-          expand Data1.cab -F:_44CD8EA541F44E56801091477F3DC9AA license.dat
-          expand Data1.cab -F:_4C8ADA37887647F5955B4FB0F716277F mwcceppc.exe
-          expand Data1.cab -F:_C63F22BC0503480DAFDCAFC394185CBA mwasmeppc.exe
-          expand Data1.cab -F:_4901FAD667D24E13BCF700F695CDD6D7 mwldeppc.exe
-          expand Data1.cab -F:_112A80A88B6147C590AE2CD9AE3F354F mwcceppc.txt
-          expand Data1.cab -F:_39217B1AFC714B7083E6CB5CBB10FC83 mwasmeppc.txt
-          expand Data1.cab -F:_312B4591741B497CB5EB342A632170BE mwldeppc.txt
-          expand Data1.cab -F:_87844F06D94541B3B62E7A69C029A35D CLT_EABI_PPC_Tools_Notes.txt
-          expand Data1.cab -F:_6F672001C92D4DF8B1893652C3B19743 CLT_Usage_Notes.txt
-          del Data1.cab
+          curl -o "extractCW.sh" "https://raw.githubusercontent.com/Newer-Team/NewerSMBW/cw/extractCW.sh"
+          bash extractCW.sh
           cd ..
 
       - name: Build BKW
-        run: build_actions.bat
+        run: wine build_actions.bat
