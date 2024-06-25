@@ -4,7 +4,8 @@ mv -t BKW_ *
 git clone "https://github.com/MelgMKW/Pulsar.git" Pulsar
 cd BKW_
 mv BKW ../Pulsar/BKW
-mv -f PulsarEngine/200cc.cpp ../PulsarEngine/Race/200cc.cpp
+mv -f PulsarEngine/200cc.cpp ../Pulsar/PulsarEngine/Race/200cc.cpp
+mv CW ../CW
 cd ../Pulsar
 
 CC="wine CW/mwcceppc.exe"
@@ -13,6 +14,7 @@ CFLAGS="-I- -i KamekInclude -i GameSource -i \"GameSource/MarioKartWii\" \
 -sdata2 0 -maxerrors 1 -func_align 4"
 CPPFILES=""
 
+rm -rf build
 mkdir build
 "$CC" "$CFLAGS" -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
 
