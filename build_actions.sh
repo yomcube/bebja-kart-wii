@@ -1,5 +1,6 @@
+#!/usr/bin/bash
 CC=wine CW/mwcceppc.exe
-CFLAGS="-I- -i KamekInclude -i GameSource -i \"GameSource/MarioKartWii\" -i PulsarEngine -i BKW -opt all -inline auto -enum int -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4"
+CFLAGS="I- -i KamekInclude -i GameSource -i \"GameSource/MarioKartWii\" -i PulsarEngine -i BKW -opt all -inline auto -enum int -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4
 CPPFILES=""
 
 mkdir build
