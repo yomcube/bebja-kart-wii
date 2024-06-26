@@ -30,8 +30,7 @@ jobs:
 
       - name: Build BKW
         shell: cmd
-        run: |
-          build_actions
+        run: build_actions.cmd
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
