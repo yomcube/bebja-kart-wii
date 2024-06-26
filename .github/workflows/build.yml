@@ -36,8 +36,9 @@ jobs:
           @echo off
           SETLOCAL EnableDelayedExpansion
           
-          git clone https://github.com/MelgMKW/Pulsar.git ..\Pulsar
-          
+          git clone https://github.com/MelgMKW/Pulsar.git Pulsar
+
+          cd BKW_
           move BKW ..\Pulsar
           move CW ..\Pulsar
           move /Y PulsarEngine\Race\200cc.cpp ..\Pulsar\PulsarEngine\Race\200cc.cpp
