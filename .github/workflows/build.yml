@@ -29,10 +29,9 @@ jobs:
           curl -o CW/mwldeppc.exe -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/mwldeppc.exe
 
       - name: Build BKW
+        shell: cmd
         run: |
           build_actions
-          
-          shell: cmd
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
