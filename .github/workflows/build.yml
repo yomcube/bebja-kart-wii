@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          path: BKW_
         
       - name: Get CW
         run: |
@@ -34,15 +36,11 @@ jobs:
           @echo off
           SETLOCAL EnableDelayedExpansion
           
-          mkdir BKW_
-          move * BKW_
+          git clone https://github.com/MelgMKW/Pulsar.git ..\Pulsar
           
-          git clone https://github.com/MelgMKW/Pulsar.git
-          
-          cd BKW_
           move BKW ..\Pulsar
           move CW ..\Pulsar
-          move PulsarEngine\Race\200cc.cpp ..\Pulsar\PulsarEngine\Race\200cc.cpp
+          move /Y PulsarEngine\Race\200cc.cpp ..\Pulsar\PulsarEngine\Race\200cc.cpp
           cd ..\Pulsar
           
           del /F /Q build
