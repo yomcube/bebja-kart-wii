@@ -30,7 +30,7 @@ jobs:
 
       - name: Build BKW
         run: |
-          build_actions.bat
+          build_actions
           
           shell: cmd
 
