@@ -11,7 +11,7 @@ Pulsar::System *BKWPack::Create() {
 Pulsar::System::Inherit CreateBKW(BKWPack::Create); //Create a Inherit that'll get called back by Pulsar::CreatePulsar
 
 void BKWPack::AfterInit() {
-	++Pulsar::UI::SettingsPanel::pageCount;
+	/*++Pulsar::UI::SettingsPanel::pageCount;
 
 	// Radio button count for new page
 	Pulsar::UI::SettingsPanel::radioButtonCount[SETTINGSTYPE_BKW] = 1;
@@ -21,7 +21,7 @@ void BKWPack::AfterInit() {
 	// Scroller count for new page
 	Pulsar::UI::SettingsPanel::scrollerCount[SETTINGSTYPE_BKW] = 1;
 	// Gamemode Scroller Option Count
-	Pulsar::UI::SettingsPanel::optionsPerPagePerScroller[SETTINGSTYPE_BKW][0] = 1;
+	Pulsar::UI::SettingsPanel::optionsPerPagePerScroller[SETTINGSTYPE_BKW][0] = 1;*/
 }
 
 Gamemode BKWPack::GetGamemode() {
