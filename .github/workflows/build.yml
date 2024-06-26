@@ -37,14 +37,13 @@ jobs:
           SETLOCAL EnableDelayedExpansion
           
           git clone https://github.com/MelgMKW/Pulsar.git Pulsar
-
+          move CW Pulsar
           cd BKW_
           move BKW ..\Pulsar
-          move CW ..\Pulsar
           move /Y PulsarEngine\Race\200cc.cpp ..\Pulsar\PulsarEngine\Race\200cc.cpp
           cd ..\Pulsar
           
-          del /F /Q build
+          del /F /Q /S build
           mkdir build
           
           SET "ENGINE=.\KamekInclude"
