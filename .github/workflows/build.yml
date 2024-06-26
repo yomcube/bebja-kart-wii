@@ -86,11 +86,6 @@ jobs:
           echo Linking... %time%
           ".\KamekLinker\Kamek.exe" "build/kamek.o" %OBJECTS% %debug% -dynamic -externals="%GAMESOURCE%/symbols.txt" -versions="%GAMESOURCE%/versions.txt" -output-combined=build\Code.pul
           
-          if %ErrorLevel% equ 0 if NOT "!RIIVO!" == "" (
-              xcopy /Y build\*.pul "%RIIVO%\Binaries" /i /q
-              echo Binaries copied
-          )
-          
           :end
           ENDLOCAL
 
@@ -98,4 +93,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Code.pul
-          path: Code.pul
+          path: build/Code.pul
