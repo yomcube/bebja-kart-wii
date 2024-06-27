@@ -34,10 +34,6 @@ kmWrite32(0x80891FCC, 0x447A0000);
 //Faster Points Increase [CLF78]
 kmWrite8(0x807F57F7, 1);
 
-//Never Burn Out [JoshuaMK]
-//DOESN'T WORK
-//kmWrite16(0x80595B18, 0x00004800);
-
 //Allow All Vehicles in Battle Mode [Nameless / Scruffy]
 kmWrite32(0x805DE7B4, 0x38000000);
 kmWrite32(0x80553F98, 0x3880000A);

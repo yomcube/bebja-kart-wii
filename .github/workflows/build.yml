@@ -22,13 +22,15 @@ jobs:
           path: BKW_
         
       - name: Get CW
+        env:
+          CW: ${{ secrets.CW_LINK }}
         run: |
           mkdir CW
-          curl -o CW/license.dat -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/license.dat
-          curl -o CW/lmgr11.dll -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/lmgr11.dll
-          curl -o CW/mwasmeppc.exe -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/mwasmeppc.exe
-          curl -o CW/mwcceppc.exe -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/mwcceppc.exe
-          curl -o CW/mwldeppc.exe -fSL https://github.com/Danster64/NSMBWer/raw/05dae4ddf04745d389923670311de437d2df825c/Kamek/tools/mwldeppc.exe
+          curl -o CW/license.dat -fSL %CW%/license.dat
+          curl -o CW/lmgr11.dll -fSL %CW%/lmgr11.dll
+          curl -o CW/mwasmeppc.exe -fSL %CW%/mwasmeppc.exe
+          curl -o CW/mwcceppc.exe -fSL %CW%/mwcceppc.exe
+          curl -o CW/mwldeppc.exe -fSL %CW%/mwldeppc.exe
 
       - name: Build BKW
         shell: cmd

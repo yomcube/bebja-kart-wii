@@ -8,6 +8,8 @@
 #include <MarioKartWii/Race/RaceData.hpp>
 #include <Race/200ccParams.hpp>
 
+// Slightly modified from
+// https://github.com/MelgMKW/Pulsar/blob/main/PulsarEngine/Race/200cc.cpp
 
 //Unoptimized code which is mostly a port of Stebler's version which itself comes from CTGP's, speed factor is in the LapSpeedModifier code
 
