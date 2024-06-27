@@ -12,7 +12,7 @@ enum ExtraSettingsType {
 };
 
 enum ExtraSettings {
-	SETTINGBKW_RADIO_MIRRORTTS = 0,
+	SETTINGBKW_RADIO_DISABLEHUD = 0,
 	SETTINGBKW_SCROLLER_MODE = 0 + 6
 };
 

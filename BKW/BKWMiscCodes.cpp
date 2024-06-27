@@ -68,30 +68,15 @@ kmWrite16(0x8064BC4E, 0x000010D7);
 kmWrite16(0x8064BCB6, 0x00000484);
 kmWrite16(0x8064BCC2, 0x000010D7);
 
-/*u8 GetMirrorModeTTsSetting() {
-	return Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORTTS);
-}*/
-
-//Mirror Mode TTs
-/*static void MirrorModeTTs() {
-	//u8 mirror = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORTTS);
-	
-	//const GameMode gameMode = RaceData::sInstance->racesScenario.settings.gamemode;
-	//const GameMode menuGameMode = RaceData::sInstance->menusScenario.settings.gamemode;
-	//const bool isTTs = gameMode == MODE_TIME_TRIAL || menuGameMode == MODE_TIME_TRIAL;
-	//if (isTTs) {
-	//	RaceData::sInstance->racesScenario.settings.modeFlags = 1;
-	//}
-	
-	u8 val = GetMirrorModeTTsSetting();
-	asm("cmpwi r24,2\n\t"
-		"bne end\n\t"
-		"li r7, %[val]\n\t"
-		"end:\n\t"
-		"stw r7,0xb90(r31)" : : [val] "r" (val));
-	
+//Disable HUD [Bully]
+//kmWrite32(0x807EC68C, 0x60000000);
+static void DisableHUD() {
+	u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_DISABLEHUD);
+	if (dis != 1) {
+		asm("stfs f1, 0x0184 (r27);"); // Original instruction
+	}
 }
-kmCall(0x8053056C, MirrorModeTTs);*/
+kmCall(0x807EC68C, DisableHUD);
 
 } // namespace MiscCodes
 } // namespace BKW
