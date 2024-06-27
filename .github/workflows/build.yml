@@ -26,11 +26,11 @@ jobs:
           CW: ${{ secrets.CW_LINK }}
         run: |
           mkdir CW
-          curl -o CW/license.dat -fSL %CW%/license.dat
-          curl -o CW/lmgr11.dll -fSL %CW%/lmgr11.dll
-          curl -o CW/mwasmeppc.exe -fSL %CW%/mwasmeppc.exe
-          curl -o CW/mwcceppc.exe -fSL %CW%/mwcceppc.exe
-          curl -o CW/mwldeppc.exe -fSL %CW%/mwldeppc.exe
+          curl -o CW/license.dat -fSL ${{ secrets.CW_LINK }}/license.dat
+          curl -o CW/lmgr11.dll -fSL ${{ secrets.CW_LINK }}/lmgr11.dll
+          curl -o CW/mwasmeppc.exe -fSL ${{ secrets.CW_LINK }}/mwasmeppc.exe
+          curl -o CW/mwcceppc.exe -fSL ${{ secrets.CW_LINK }}/mwcceppc.exe
+          curl -o CW/mwldeppc.exe -fSL ${{ secrets.CW_LINK }}/mwldeppc.exe
 
       - name: Build BKW
         shell: cmd
