@@ -78,5 +78,17 @@ static void DisableHUD() {
 }
 kmCall(0x807EC68C, DisableHUD);
 
+//Silent Controller Changing [Bully]
+static void SilentControllerChanging() {
+	u8 scc = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_SCC);
+	if (scc != 1) {
+		asm("cmpwi r0, 0;");
+	}
+	else {
+		asm("cmpwi r0, 0xFF;");
+	}
+}
+kmCall(0x8061AF97, SilentControllerChanging);
+
 } // namespace MiscCodes
 } // namespace BKW
