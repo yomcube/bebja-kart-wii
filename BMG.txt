@@ -206,12 +206,7 @@
   5805	= Grand Prix will be 64 races each.
   5806	= Grand Prix will be 2 races each.
   6000  = Show HUD
-  6001  = SCC
   6010  = Enabled
   6011  = Disabled
-  6020  = Disabled
-  6021  = Enabled
   6100  = The HUD will be shown normally.
   6101  = The HUD will not be shown.
-  6200  = Changing controllers will alert you as usual.
-  6201  = Changing controllers will not alert you.

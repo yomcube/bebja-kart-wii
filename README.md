@@ -19,7 +19,6 @@
 ### Toggable
 - [x] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
 - [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482) + [No Voice Sounds (Online) [davidevgen]](https://mariokartwii.com/showthread.php?tid=483)
-- [ ] [Silent Controller Changer [Bully]](https://mariokartwii.com/showthread.php?tid=164)
 
 ## C2 Codes
 - [ ] [Enhanced Start Line (LE-CODE replica) [Kazuki]](https://mariokartwii.com/showthread.php?tid=1790)

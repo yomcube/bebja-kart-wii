@@ -57,6 +57,7 @@ if %Errorlevel% equ 0 (
 	echo Copying binaries...
 	copy build\*.pul %CD%
 	copy Code.pul C:\Dolphin\Load\Riivolution\BKW\Binaries
+	copy Code.pul ..
 	::copy Code.pul Binaries
 	echo Binaries copied
 )
