@@ -49,7 +49,7 @@
 - [ ] Local Multiplayer Time Trials
 - [ ] Make ZL Button Wheelie Button (If that's possible)
 - [ ] Make Minimap Toggable
-- [ ] Program to Upload / Download Ghosts
+- [ ] Program to Upload / Download Ghosts (WIP, [yomcube/GhostDB](https://github.com/yomcube/GhostDB/))
 ### Toggable
 - [ ] CC Changes (Normal, 300CC, 500CC, 1000CC)
 - [ ] Colored Minimaps / Speedometer
