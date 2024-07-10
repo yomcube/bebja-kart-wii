@@ -22,8 +22,6 @@ jobs:
           path: BKW_
         
       - name: Get CW
-        env:
-          CW: ${{ secrets.CW_LINK }}
         run: |
           mkdir CW
           curl -o CW/license.dat -fSL ${{ secrets.CW_LINK }}/license.dat
