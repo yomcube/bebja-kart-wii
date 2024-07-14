@@ -1,6 +1,6 @@
 # bebja-kart-wii
 ## Unsorted
-
+- [ ] Make a toggle between [Wiimmfi](https://wiimmfi.de) and [WiiLink](https://www.wiilink24.com)
 ## Simple Memory Patches
 - [x] [Remove Worldwide Option [Chadderz]](https://mariokartwii.com/showthread.php?tid=994)
 - [x] [Show Battle Map Icons [CLF78]](https://mariokartwii.com/showthread.php?tid=1840)
