@@ -1,7 +1,10 @@
 # bebja-kart-wii
+
 ## Unsorted
-- [ ] Make a toggle between [Wiimmfi](https://wiimmfi.de) and [WiiLink](https://www.wiilink24.com)
+
 ## Simple Memory Patches
+Memory patches are simple to implement, since they can be implemented with a simple `kmWriteX`, where `X` is the type of integer that the code patches.
+
 - [x] [Remove Worldwide Option [Chadderz]](https://mariokartwii.com/showthread.php?tid=994)
 - [x] [Show Battle Map Icons [CLF78]](https://mariokartwii.com/showthread.php?tid=1840)
 - [x] [Allow Looking Backwards During Respawn [Ro]](https://mariokartwii.com/showthread.php?tid=2128)
@@ -17,42 +20,51 @@
 - [ ] [Never Burn Out [JoshuaMK]](https://mariokartwii.com/showthread.php?tid=1367)
 ### Toggable
 - [x] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
-- [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482) + [No Voice Sounds (Online) [davidevgen]](https://mariokartwii.com/showthread.php?tid=483)
+- [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482)
+- [ ] [No Voice Sounds (Online) [davidevgen]](https://mariokartwii.com/showthread.php?tid=483)
 
 ## C2 Codes
+C2 codes are more difficult to implement than memory patches, since they insert assembly code.
+
 - [ ] [Enhanced Start Line (LE-CODE replica) [Kazuki]](https://mariokartwii.com/showthread.php?tid=1790)
-- [ ] [Items on Minimap](https://mariokartwii.com/showthread.php?tid=1896)
+- [ ] [Items on Minimap [stebler]](https://mariokartwii.com/showthread.php?tid=1896)
 - [ ] [Item Rain (v1.5) [MrBean]](https://mariokartwii.com/showthread.php?tid=396)
 ### Toggable
-- [ ] [1st Person Camera View](https://mariokartwii.com/showthread.php?tid=1331)
-- [ ] [Mirror Mode TTs](https://mariokartwii.com/showthread.php?tid=1981)
+- [ ] [1st Person Camera View [JoshuaMK, mdmwii]](https://mariokartwii.com/showthread.php?tid=1331)
+- [ ] [Mirror Mode TTs [vabold]](https://mariokartwii.com/showthread.php?tid=1981)
 
-## Riivolution
-### Toggable
-- [ ] Switching Languages through different Config.puls
-- [ ] Multiple Fonts
 ## Pulsar Mods
 - [x] [Accurate Item Roulete [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/Roulette.cpp)
+
 ## GCT
-- [ ] [Can Always Drift [Supastarrio]](https://mariokartwii.com/showthread.php?tid=214) 
-- [ ] [Hybrid Drift v2.0 [Ismy, CLF78]](https://mariokartwii.com/showthread.php?tid=1933)
+See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2Nzi6K0l196_nXZkIPyEdXMTc7s/edit?pli=1&gid=1019452145#gid=1019452145) for active codes.  
 - [ ] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
 
 ## Other
 - [x] 200cc Brake Drifting in all CCs
 - [ ] Homebrew Updater (Like OptPack)
+    - BKW probably won't be very popular, so adding this won't necessarily be worth the effort.
 - [ ] Custom Wii Channel
+    - Like the homebrew updater, BKW probably won't be very popular, so adding this won't necessarily be worth the effort.
 - [ ] [TTs Online](https://wiki.tockdom.com/wiki/TTs_Online)
 - [ ] Settings while Pause Menu
 - [ ] That Option to change between Inside and Outside Drift Variety Pack has
 - [ ] The Volume Controls from MKW-SP
+    - MKW-SP has an entirely different system than Pulsar.
 - [ ] Local Multiplayer Time Trials
-- [ ] Make ZL Button Wheelie Button (If that's possible)
+    - Unrealistic. Nobody has ever made this and will never happen unless someone is willing to implement it.
+- [ ] Make ZL Button Wheelie Button
 - [ ] Make Minimap Toggable
 - [ ] Beginner staff ghosts
-- [ ] Program to Upload / Download Ghosts (WIP, [yomcube/GhostDB](https://github.com/yomcube/GhostDB/))
+    - Poor design choice, as explained below. Nevertheless, it could be added.
+      >  it is likely that many Pulsar packs get made in the future, and therefore the sheer number of staff ghosts would mean most do not get beat, making beginner staff ghosts more of a negative than a positive, as on every pack you would have to first beat these ghosts to even unlock the myriad of experts.  
+      > — Melg
+- [ ] Integration with [GhostDB](https://github.com/yomcube/GhostDB/)
+    - This won't happen until GhostDB is finished. MKW-SP will have a higher integration priority, so integrating with Pulsar will have to wait until then.
+
 ### Toggable
 - [ ] CC Changes (Normal, 300CC, 500CC, 1000CC)
 - [ ] Colored Minimaps / Speedometer
 - [ ] An Input Display from MKW-SP
-- [ ] Load between different Music Packs (CTBRSTM)
+    - MKW-SP has an entirely different system than Pulsar.
+- [ ] Toggle between [Wiimmfi](https://wiimmfi.de) and [WiiLink](https://www.wiilink24.com)
