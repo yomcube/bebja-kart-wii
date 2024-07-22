@@ -42,17 +42,17 @@ See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2N
 
 ## Other
 - [x] 200cc Brake Drifting in all CCs
-- [ ] Homebrew Updater (Like OptPack)
+- [ ] **[Large project]** Homebrew Updater (Like OptPack)
     - BKW probably won't be very popular, so adding this won't necessarily be worth the effort.
-- [ ] Custom Wii Channel
+- [ ] **[Large project]** Custom Wii Channel
     - Like the homebrew updater, BKW probably won't be very popular, so adding this won't necessarily be worth the effort.
 - [ ] [TTs Online](https://wiki.tockdom.com/wiki/TTs_Online)
 - [ ] Settings while Pause Menu
 - [ ] That Option to change between Inside and Outside Drift Variety Pack has
 - [ ] The Volume Controls from MKW-SP
     - MKW-SP has an entirely different system than Pulsar.
-- [ ] Local Multiplayer Time Trials
-    - Unrealistic. Nobody has ever made this and will never happen unless someone is willing to implement it.
+- [ ] ***[Extremely large project]*** Local Multiplayer Time Trials
+    - Unrealistic. Nobody has ever made this and will never happen unless someone is willing to make it.
 - [ ] Make ZL Button Wheelie Button
 - [ ] Make Minimap Toggable
 - [ ] Beginner staff ghosts
