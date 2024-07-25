@@ -67,6 +67,15 @@ kmWrite16(0x8064BCC2, 0x000010D7);
 //Never Burn Out [JoshuaMK]
 kmWrite16(0x80595B18, 0x00004800);
 
+//Change VR Limit [XeR]
+// 0x4E20 = 20000
+kmWrite16(0x80528E12, 0x00004E20);
+kmWrite16(0x80528E1A, 0x00004E20);
+kmWrite16(0x8061C3C6, 0x00004E20);
+kmWrite16(0x8061C3D2, 0x00004E20);
+kmWrite16(0x8083A7AE, 0x00004E20);
+kmWrite16(0x8083A7B6, 0x00004E20);
+
 //Disable HUD [Bully]
 //kmWrite32(0x807EC68C, 0x60000000);
 static void DisableHUD() {
