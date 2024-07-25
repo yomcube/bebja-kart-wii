@@ -64,6 +64,9 @@ kmWrite16(0x8064BC4E, 0x000010D7);
 kmWrite16(0x8064BCB6, 0x00000484);
 kmWrite16(0x8064BCC2, 0x000010D7);
 
+//Never Burn Out [JoshuaMK]
+kmWrite16(0x80595B18, 0x00004800);
+
 //Disable HUD [Bully]
 //kmWrite32(0x807EC68C, 0x60000000);
 static void DisableHUD() {
