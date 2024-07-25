@@ -17,6 +17,7 @@ Memory patches are simple to implement, since they can be implemented with a sim
 - [x] [Show Minimap Topography [Mu1hwu]](https://mariokartwii.com/showthread.php?tid=2066)
 - [x] [Disable Low Battery Notification [Diamond]](https://mariokartwii.com/showthread.php?tid=1645)
 - [x] [Remove Mushroom Bug [Vega]](https://mariokartwii.com/showthread.php?tid=909)
+- [ ] [Increase VR Limit](https://mariokartwii.com/showthread.php?tid=225)
 - [ ] [Never Burn Out [JoshuaMK]](https://mariokartwii.com/showthread.php?tid=1367)
 ### Toggable
 - [x] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
@@ -42,7 +43,6 @@ See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2N
 
 ## Other
 - [x] 200cc Brake Drifting in all CCs
-- [ ] [Increase VR Limit](https://mariokartwii.com/showthread.php?tid=225)
 - [ ] **[Large project]** Homebrew Updater (Like OptPack)
     - BKW probably won't be very popular, so adding this won't necessarily be worth the effort.
 - [ ] **[Large project]** Custom Wii Channel
