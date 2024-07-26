@@ -21,10 +21,13 @@ Memory patches are simple to implement, since they can be implemented with a sim
 - [x] [Change VR Limit [XeR]](https://mariokartwii.com/showthread.php?tid=225)
 - [x] [Never Burn Out [JoshuaMK]](https://mariokartwii.com/showthread.php?tid=1367)
 - [ ] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
+- [ ] [Colored Minimap](https://mariokartwii.com/showthread.php?tid=2036
+- [ ] [All Items can Land (v2) [MrBean, CLF78]](https://mariokartwii.com/showthread.php?tid=1720)
 ### Toggable
 - [x] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
 - [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482)
 - [ ] [No Voice Sounds (Online) [davidevgen]](https://mariokartwii.com/showthread.php?tid=483)
+- [ ] [Mario Kart 8 Drifting Camera [fishguy]](https://mariokartwii.com/showthread.php?tid=1632)
 
 ## C2 Codes
 C2 codes are more difficult to implement than memory patches, since they insert assembly code.
@@ -33,6 +36,7 @@ C2 codes are more difficult to implement than memory patches, since they insert 
 - [ ] [Items on Minimap [stebler]](https://mariokartwii.com/showthread.php?tid=1896)
 - [ ] [Item Rain (v1.5) [MrBean]](https://mariokartwii.com/showthread.php?tid=396)
 - [ ] [Enhanced Ghost Replay [MrBean35000vr]](https://mariokartwii.com/showthread.php?tid=108)
+- [ ] [Show Quit Confirmation Screen in Single Player [CLF78]](https://mariokartwii.com/showthread.php?tid=1884)
 ### Toggable
 - [ ] [1st Person Camera View [JoshuaMK, mdmwii]](https://mariokartwii.com/showthread.php?tid=1331)
 - [ ] [Mirror Mode TTs [vabold]](https://mariokartwii.com/showthread.php?tid=1981)
