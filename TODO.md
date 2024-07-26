@@ -1,6 +1,7 @@
 # bebja-kart-wii
 
 ## Unsorted
+[Double Framerate](https://www.youtube.com/watch?v=Yw4CmP9qeZU)
 
 ## Simple Memory Patches
 Memory patches are simple to implement, since they can be implemented with a simple `kmWriteX`, where `X` is the type of integer that the code patches.
@@ -31,6 +32,7 @@ C2 codes are more difficult to implement than memory patches, since they insert 
 - [ ] [Enhanced Start Line (LE-CODE replica) [Kazuki]](https://mariokartwii.com/showthread.php?tid=1790)
 - [ ] [Items on Minimap [stebler]](https://mariokartwii.com/showthread.php?tid=1896)
 - [ ] [Item Rain (v1.5) [MrBean]](https://mariokartwii.com/showthread.php?tid=396)
+- [ ] [Enhanced Ghost Replay [MrBean35000vr]](https://mariokartwii.com/showthread.php?tid=108)
 ### Toggable
 - [ ] [1st Person Camera View [JoshuaMK, mdmwii]](https://mariokartwii.com/showthread.php?tid=1331)
 - [ ] [Mirror Mode TTs [vabold]](https://mariokartwii.com/showthread.php?tid=1981)
