@@ -23,6 +23,7 @@ Memory patches are simple to implement, since they can be implemented with a sim
 - [ ] [Faster Points Increase [CLF78]](https://mariokartwii.com/showthread.php?tid=1858)
 - [ ] [Colored Minimap](https://mariokartwii.com/showthread.php?tid=2036)
 - [ ] [All Items can Land (v2) [MrBean, CLF78]](https://mariokartwii.com/showthread.php?tid=1720)
+- [ ] [Allow Pausing before the Race Starts [Gaberloo](https://mariokartwii.com/showthread.php?tid=2108)
 ### Toggable
 - [x] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
 - [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482)
