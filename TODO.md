@@ -41,6 +41,7 @@ C2 codes are more difficult to implement than memory patches, since they insert 
 ### Toggable
 - [ ] [1st Person Camera View [JoshuaMK, mdmwii]](https://mariokartwii.com/showthread.php?tid=1331)
 - [ ] [Mirror Mode TTs [vabold]](https://mariokartwii.com/showthread.php?tid=1981)
+- [ ] [Double Dash!! Speedometer [Sponge]](https://mariokartwii.com/showthread.php?tid=2158)
 
 ## Pulsar Mods
 - [x] [Accurate Item Roulete [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/Roulette.cpp)
