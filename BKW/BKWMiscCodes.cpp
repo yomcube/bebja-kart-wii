@@ -31,9 +31,6 @@ kmWrite32(0x807BB764, 0x60000000);
 //Better Bullet Bill Curve Tightness [davidevgen]
 kmWrite32(0x80891FCC, 0x447A0000);
 
-//Faster Points Increase [CLF78]
-kmWrite8(0x807F57F7, 0x00000001);
-
 //Allow All Vehicles in Battle Mode [Nameless / Scruffy]
 kmWrite32(0x805DE7B4, 0x38000000);
 kmWrite32(0x80553F98, 0x3880000A);
