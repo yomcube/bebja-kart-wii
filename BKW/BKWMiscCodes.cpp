@@ -32,7 +32,7 @@ kmWrite32(0x807BB764, 0x60000000);
 kmWrite32(0x80891FCC, 0x447A0000);
 
 //Faster Points Increase [CLF78]
-kmWrite8(0x807F57F7, 1);
+kmWrite8(0x807F57F7, 0x00000001);
 
 //Allow All Vehicles in Battle Mode [Nameless / Scruffy]
 kmWrite32(0x805DE7B4, 0x38000000);
