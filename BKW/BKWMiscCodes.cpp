@@ -77,10 +77,9 @@ kmWrite16(0x8083A7AE, 0x00004E20);
 kmWrite16(0x8083A7B6, 0x00004E20);
 
 //Allow pausing before the race starts [Sponge]
-kmWrite32(0x80856A28; 48000050);
+kmWrite32(0x80856A28, 0x48000050);
 
 //Disable HUD [Bully]
-//kmWrite32(0x807EC68C, 0x60000000);
 static void DisableHUD() {
 	u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_DISABLEHUD);
 	if (dis != 1) {
