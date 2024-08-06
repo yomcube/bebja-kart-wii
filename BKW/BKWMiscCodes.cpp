@@ -336,6 +336,27 @@ loc_0xB0:
 }
 
 
+//Show Quit Confirmation Screen in Single Player [CLF78]
+kmCallDefAsm(0x8062C66C) {
+loc_0x0:
+  mr r3, r31
+  li r4, 0x2C
+  lis r12, 0x8062
+  ori r12, r12, 0x2D08
+  mtctr r12
+  bctrl 
+  mr r3, r31
+  .opword 0x00000000
+  lfs f19, -14416(r2)
+  .opword 0x00000004
+  mr r3, r31
+  li r4, 0x2C
+  lis r12, 0x8062
+  ori r12, r12, 0x2D08
+  mtctr r12
+  bctrl 
+  mr r3, r31
+}
 
 //Disable HUD [Bully]
 static void DisableHUD() {
