@@ -79,68 +79,6 @@ kmWrite32(0x80856A28, 0x48000050);
 //Can Always Drift [Supastarrio]
 kmWrite32(0x808B5B1C, 0x00000000);
 
-//Enhanced Start Line (LE-CODE replica) [Kazuki]
-kmCallDefAsm(0x807EAA94) {
-loc_0x0:
-  lis r12, 0x809C
-  lwz r12, -10520(r12)
-  lwz r12, 4(r12)
-  lwz r12, 0(r12)
-  lhz r10, 10(r12)
-  lwz r11, 16(r12)
-  add r11, r11, r10
-  add r12, r12, r11
-  lhz r11, 4(r12)
-  cmpwi r11, 0x2
-  blt- loc_0x40
-  lhz r11, 60(r12)
-  cmplwi r11, 65535
-  bne- loc_0x40
-  addi r12, r12, 0x24
-  b loc_0x44
-
-loc_0x40:
-  addi r12, r12, 0x8
-
-loc_0x44:
-  lfs f2, 0(r12)
-  lfs f0, 8(r12)
-  lwz r12, 16(r12)
-  lis r11, 0x8168
-  stw r12, 12832(r11)
-  stfs f2, 412(r3)
-  nop 
-  lfs f19, -21836(r30)
-  .opword 0x0000000c
-  lis r12, 0x8168
-  lfs f1, 12832(r12)
-  lis r12, 0x8000
-  lbz r12, 24359(r12)
-  lis r10, 0x809B
-  cmpwi r12, 0xEC
-  ori r11, r10, 0xD728
-  beq- loc_0xA8
-  cmpwi r12, 0x10
-  ori r11, r10, 0xC788
-  beq- loc_0xA8
-  cmpwi r12, 0x54
-  lis r11, 0x809A
-  ori r11, r11, 0xBD68
-  beq- loc_0xA8
-  ori r11, r10, 0x8F68
-
-loc_0xA8:
-  lwz r11, 0(r11)
-  lwz r11, 2960(r11)
-  cmpwi r11, 0x1
-  bne+ loc_0xBC
-  fneg f1, f1
-
-loc_0xBC:
-  stfs f1, 428(r3)
-}
-
-
 
 //Items on Minimap [stebler] #1
 kmCallDefAsm(0x80858194) {
