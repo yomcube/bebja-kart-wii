@@ -35,14 +35,14 @@ C2 codes are more difficult to implement than memory patches, since they insert 
 
 - [ ] [Enhanced Start Line (LE-CODE replica) [Kazuki]](https://mariokartwii.com/showthread.php?tid=1790)
 - [ ] [Items on Minimap [stebler]](https://mariokartwii.com/showthread.php?tid=1896)
-- [ ] [Item Rain (v1.5) [MrBean]](https://mariokartwii.com/showthread.php?tid=396)
 - [ ] [Enhanced Ghost Replay [MrBean35000vr]](https://mariokartwii.com/showthread.php?tid=108)
 - [ ] [Show Quit Confirmation Screen in Single Player [CLF78]](https://mariokartwii.com/showthread.php?tid=1884)
 ### Toggable
 - [ ] [1st Person Camera View [JoshuaMK, mdmwii]](https://mariokartwii.com/showthread.php?tid=1331)
 - [ ] [Mirror Mode TTs [vabold]](https://mariokartwii.com/showthread.php?tid=1981)
 - [ ] [Double Dash!! Speedometer [Sponge]](https://mariokartwii.com/showthread.php?tid=2158)
-
+- [ ] [Item Rain (v1.5) [MrBean]](https://mariokartwii.com/showthread.php?tid=396)
+      
 ## Pulsar Mods
 - [x] [Accurate Item Roulete [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/Roulette.cpp)
 
