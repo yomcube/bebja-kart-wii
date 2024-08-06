@@ -288,7 +288,8 @@ loc_0x78:
 }
 
 
-//Enhanced Ghost Replay [MrBean]
+//Enhanced Ghost Replay [MrBean] #1
+
 kmCallDefAsm(0x8062CCDC) {
 loc_0x0:
   li r4, 0xD
@@ -307,10 +308,12 @@ loc_0x0:
   stw r6, 60(r5)
   mr r3, r31
   li r4, 0x3A
-  nop 
-  .opword 0x00000000
-  lfs f19, 15360(r3)
-  .opword 0x0000000f
+}
+
+//Enhanced Ghost Replay [MrBean] #2
+
+kmCallDefAsm(80633C00) {
+loc_0x0:
   cmpwi r0, 0x34
   bnelr- 
   li r3, 0x1F
@@ -327,24 +330,23 @@ loc_0x0:
   stw r5, 32(r4)
   lwz r4, 0(r4)
   mflr r6
-  bl loc_0xB0
+  bl loc_0x60
   lwz r4, 68(r3)
   cmpwi r4, 0x37
-  bne- loc_0xA8
+  bne- loc_0x58
   li r5, 0x2D
   stw r5, 68(r3)
 
-loc_0xA8:
+loc_0x58:
   mr r3, r4
   blr 
 
-loc_0xB0:
+loc_0x60:
   mflr r5
   mtlr r6
   stw r5, 16(r4)
   blr 
 }
-
 
 //Show Quit Confirmation Screen in Single Player [CLF78] #1
 kmCallDefAsm(0x8062C66C) {
@@ -388,9 +390,9 @@ loc_0x24:
 
 loc_0x28:
   nop 
-  .word 0x00000000
+  .opword 0x00000000
   lfs f18, -27892(r23)
-  .word 0x00000006
+  .opword 0x00000006
   lwz r12, 0(r28)
   lwz r12, 0(r12)
   lwz r12, 20(r12)
@@ -406,9 +408,9 @@ loc_0x5C:
 
 loc_0x60:
   nop 
-  .word 0x00000000
+  .opword 0x00000000
   lfs f18, -8280(r23)
-  .word 0x00000004
+  .opword 0x00000004
   lwz r0, 20(r3)
   rlwinm. r12, r0, 0, 18, 18
   beq- loc_0x84
@@ -418,9 +420,9 @@ loc_0x60:
 loc_0x84:
   lwz r0, 4(r3)
   nop 
-  .word 0x00000000
+  .opword 0x00000000
   lfs f18, -8168(r23)
-  .word 0x00000004
+  .opword 0x00000004
   lwz r0, 20(r4)
   rlwinm. r12, r0, 0, 18, 18
   beq- loc_0xAC
@@ -430,9 +432,9 @@ loc_0x84:
 loc_0xAC:
   lwz r0, 4(r4)
   nop 
-  .word 0x00000000
+  .opword 0x00000000
   lfs f18, -7928(r23)
-  .word 0x00000003
+  .opword 0x00000003
   rlwinm. r0, r0, 0, 27, 27
   bne- loc_0xD0
   li r0, 0x0
@@ -440,9 +442,9 @@ loc_0xAC:
 
 loc_0xD0:
   nop 
-  .word 0x00000000
+  .opword 0x00000000
   lfs f18, -7228(r23)
-  .word 0x00000004
+  .opword 0x00000004
   lwz r0, 20(r4)
   rlwinm. r12, r0, 0, 18, 18
   beq- loc_0xF4
@@ -452,9 +454,9 @@ loc_0xD0:
 loc_0xF4:
   lwz r0, 4(r4)
   nop 
-  .word 0x00000000
+  .opword 0x00000000
   lfs f18, 19112(r25)
-  .word 0x00000005
+  .opword 0x00000005
   lwz r3, 4(r30)
   andi. r4, r3, 0x84
   beq- loc_0x128
@@ -466,16 +468,16 @@ loc_0xF4:
 
 loc_0x128:
   mr r3, r30
-  .word 0x00000000
-  .word 0x0059450e
-  .word 0x00000020
-  .word 0x04594a60
+  .opword 0x00000000
+  .opword 0x0059450e
+  .opword 0x00000020
+  .opword 0x04594a60
   nop 
-  .word 0x045a35bc
+  .opword 0x045a35bc
   li r3, 0x0
-  .word 0x02745ab0
-  .word 0x00004800
-  .word 0x028cb70a
+  .opword 0x02745ab0
+  .opword 0x00004800
+  .opword 0x028cb70a
 }
 
 //Disable HUD [Bully]
