@@ -141,7 +141,8 @@ loc_0xBC:
 }
 
 
-//Items on Minimap [stebler]
+
+//Items on Minimap [stebler] #1
 kmCallDefAsm(0x80858194) {
 loc_0x0:
   lis r3, 0x809C
@@ -153,9 +154,11 @@ loc_0x0:
   add r3, r4, r3
   mulli r3, r3, 0x1B4
   addi r3, r3, 0x1A4
-  .opword 0x00000000
-  lfs f19, -23472(r30)
-  .opword 0x00000005
+}
+
+//Items on Minimap [stebler] #2
+kmCallDefAsm(0x807EA450) {
+loc_0x0:
   addi r26, r27, 0x1
   lis r5, 0x809C
   lwz r5, 13848(r5)
@@ -165,17 +168,19 @@ loc_0x0:
   lwz r5, 584(r5)
   add r5, r6, r5
   add r26, r26, r5
-  .opword 0x00000000
-  lfs f19, -22816(r30)
-  .opword 0x00000023
+}
+
+//Items on Minimap [stebler] #3
+kmCallDefAsm(0x807EA6E0) {
+loc_0x0:
   bctrl 
   li r26, 0x0
   addi r23, r24, 0x1A4
 
-loc_0x6C:
+loc_0xC:
   li r25, 0x0
 
-loc_0x70:
+loc_0x10:
   mr r3, r23
   lis r12, 0x8063
   ori r12, r12, 0xD798
@@ -215,14 +220,13 @@ loc_0x70:
   stb r25, 130(r23)
   lis r6, 0x808A
   ori r3, r6, 0xF7C0
-  bl loc_0x120
+  bl loc_0xC0
   .opword 0x000c182c
   ori r12, r2, 0x5820
-  .op
-word 0x7840848c
+  .opword 0x7840848c
   xori r28, r4, 36864
 
-loc_0x120:
+loc_0xC0:
   mflr r4
   lbzx r4, r4, r26
   add r5, r3, r4
@@ -240,17 +244,19 @@ loc_0x120:
   add r3, r3, r4
   lwz r3, 80(r3)
   cmpw r25, r3
-  blt+ loc_0x70
+  blt+ loc_0x10
   addi r26, r26, 0x1
   cmpwi r26, 0xF
-  blt+ loc_0x6C
-  .opword 0x00000000
-  lfs f19, -21336(r30)
-  .opword 0x00000010
+  blt+ loc_0xC
+}
+
+//Items on Minimap [stebler] #4
+kmCallDefAsm(0x807EACA8) {
+loc_0x0:
   bctrl 
   lwz r3, 364(r31)
   cmpwi r3, 0x0
-  beq- loc_0x1F8
+  beq- loc_0x78
   lwz r3, 408(r31)
   li r4, 0xA0
   stb r4, 184(r3)
@@ -267,7 +273,7 @@ loc_0x120:
   lwz r4, 88(r3)
   lbz r5, 130(r31)
   cmpw r5, r4
-  bge- loc_0x1F8
+  bge- loc_0x78
   li r4, 0x0
   stb r4, 128(r31)
   lwz r3, 76(r3)
@@ -278,8 +284,9 @@ loc_0x120:
   addi r4, r31, 0x19C
   stswi r5, r4, 12
 
-loc_0x1F8:
+loc_0x78:
 }
+
 
 //Enhanced Ghost Replay [MrBean]
 kmCallDefAsm(0x8062CCDC) {
