@@ -79,7 +79,7 @@ kmWrite32(0x80856A28, 0x48000050);
 //Can Always Drift [Supastarrio]
 kmWrite32(0x808B5B1C, 0x00000000);
 
-
+//ITEMS ON MINIMAP 
 //Items on Minimap [stebler] #1
 kmCallDefAsm(0x80858194) {
 loc_0x0:
@@ -226,8 +226,8 @@ loc_0x78:
 }
 
 
+//ENHANCED GHOST REPLAY
 //Enhanced Ghost Replay [MrBean] #1
-
 kmCallDefAsm(0x8062CCDC) {
 loc_0x0:
   li r4, 0xD
@@ -286,6 +286,7 @@ loc_0x60:
   blr 
 }
 
+//SHOW QUIT CONFIRMATION SCREEN IN SINGLE PLAYER
 //Show Quit Confirmation Screen in Single Player [CLF78] #1
 kmCallDefAsm(0x8062C66C) {
 loc_0x0:
