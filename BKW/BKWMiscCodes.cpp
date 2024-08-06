@@ -312,7 +312,7 @@ loc_0x0:
 
 //Enhanced Ghost Replay [MrBean] #2
 
-kmCallDefAsm(80633C00) {
+kmCallDefAsm(0x80633C00) {
 loc_0x0:
   cmpwi r0, 0x34
   bnelr- 
