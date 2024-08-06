@@ -346,7 +346,7 @@ loc_0xB0:
 }
 
 
-//Show Quit Confirmation Screen in Single Player [CLF78]
+//Show Quit Confirmation Screen in Single Player [CLF78] #1
 kmCallDefAsm(0x8062C66C) {
 loc_0x0:
   mr r3, r31
@@ -356,9 +356,11 @@ loc_0x0:
   mtctr r12
   bctrl 
   mr r3, r31
-  .opword 0x00000000
-  lfs f19, -14416(r2)
-  .opword 0x00000004
+}
+
+//Show Quit Confirmation Screen in Single Player [CLF78] #2
+kmCallDefAsm(0x8062C7B0) {
+loc_0x0:
   mr r3, r31
   li r4, 0x2C
   lis r12, 0x8062
