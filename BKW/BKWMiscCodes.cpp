@@ -76,6 +76,9 @@ kmWrite16(0x8083A7B6, 0x00004E20);
 //Allow pausing before the race starts [Sponge]
 kmWrite32(0x80856A28, 0x48000050);
 
+//Can Always Drift [Supastarrio]
+kmWrite32(0x808B5B1C, 0x00000000);
+
 //Enhanced Start Line (LE-CODE replica) [Kazuki]
 kmCallDefAsm(0x807EAA94) {
 loc_0x0:
@@ -356,6 +359,114 @@ loc_0x0:
   mtctr r12
   bctrl 
   mr r3, r31
+}
+
+//Hybrid Drift [Ismy & CLF78]
+kmCallDefAsm(0x80578DCC) {
+	loc_0x0:
+  lwz r12, 0(r28)
+  lwz r12, 0(r12)
+  lwz r12, 20(r12)
+  lwz r12, 0(r12)
+  lwz r12, 4(r12)
+  cmpwi r12, 0x2
+  beq- loc_0x24
+  li r0, 0x0
+  b loc_0x28
+
+loc_0x24:
+  lwz r0, 20(r3)
+
+loc_0x28:
+  nop 
+  .word 0x00000000
+  lfs f18, -27892(r23)
+  .word 0x00000006
+  lwz r12, 0(r28)
+  lwz r12, 0(r12)
+  lwz r12, 20(r12)
+  lwz r12, 0(r12)
+  lwz r12, 4(r12)
+  cmpwi r12, 0x2
+  beq- loc_0x5C
+  li r0, 0x0
+  b loc_0x60
+
+loc_0x5C:
+  lwz r0, 20(r3)
+
+loc_0x60:
+  nop 
+  .word 0x00000000
+  lfs f18, -8280(r23)
+  .word 0x00000004
+  lwz r0, 20(r3)
+  rlwinm. r12, r0, 0, 18, 18
+  beq- loc_0x84
+  ori r0, r0, 0x10
+  stw r0, 20(r3)
+
+loc_0x84:
+  lwz r0, 4(r3)
+  nop 
+  .word 0x00000000
+  lfs f18, -8168(r23)
+  .word 0x00000004
+  lwz r0, 20(r4)
+  rlwinm. r12, r0, 0, 18, 18
+  beq- loc_0xAC
+  ori r0, r0, 0x10
+  stw r0, 20(r4)
+
+loc_0xAC:
+  lwz r0, 4(r4)
+  nop 
+  .word 0x00000000
+  lfs f18, -7928(r23)
+  .word 0x00000003
+  rlwinm. r0, r0, 0, 27, 27
+  bne- loc_0xD0
+  li r0, 0x0
+  stw r0, 456(r3)
+
+loc_0xD0:
+  nop 
+  .word 0x00000000
+  lfs f18, -7228(r23)
+  .word 0x00000004
+  lwz r0, 20(r4)
+  rlwinm. r12, r0, 0, 18, 18
+  beq- loc_0xF4
+  ori r0, r0, 0x10
+  stw r0, 20(r4)
+
+loc_0xF4:
+  lwz r0, 4(r4)
+  nop 
+  .word 0x00000000
+  lfs f18, 19112(r25)
+  .word 0x00000005
+  lwz r3, 4(r30)
+  andi. r4, r3, 0x84
+  beq- loc_0x128
+  lwz r4, 20(r30)
+  rlwinm r4, r4, 0, 28, 26
+  stw r4, 20(r30)
+  rlwinm r3, r3, 0, 4, 2
+  stw r3, 4(r30)
+
+loc_0x128:
+  mr r3, r30
+  .word 0x00000000
+  .word 0x0059450e
+  .word 0x00000020
+  .word 0x04594a60
+  nop 
+  .word 0x045a35bc
+  li r3, 0x0
+  .word 0x02745ab0
+  .word 0x00004800
+  .word 0x028cb70a
 }
 
 //Disable HUD [Bully]
