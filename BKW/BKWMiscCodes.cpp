@@ -137,6 +137,150 @@ loc_0xBC:
   stfs f1, 428(r3)
 }
 
+
+//Items on Minimap [stebler]
+kmCallDefAsm(0x80858194) {
+loc_0x0:
+  lis r3, 0x809C
+  lwz r3, 13848(r3)
+  lwz r4, 580(r3)
+  lwz r4, 0(r4)
+  lhz r4, 8(r4)
+  lwz r3, 584(r3)
+  add r3, r4, r3
+  mulli r3, r3, 0x1B4
+  addi r3, r3, 0x1A4
+  .opword 0x00000000
+  lfs f19, -23472(r30)
+  .opword 0x00000005
+  addi r26, r27, 0x1
+  lis r5, 0x809C
+  lwz r5, 13848(r5)
+  lwz r6, 580(r5)
+  lwz r6, 0(r6)
+  lhz r6, 8(r6)
+  lwz r5, 584(r5)
+  add r5, r6, r5
+  add r26, r26, r5
+  .opword 0x00000000
+  lfs f19, -22816(r30)
+  .opword 0x00000023
+  bctrl 
+  li r26, 0x0
+  addi r23, r24, 0x1A4
+
+loc_0x6C:
+  li r25, 0x0
+
+loc_0x70:
+  mr r3, r23
+  lis r12, 0x8063
+  ori r12, r12, 0xD798
+  mtctr r12
+  bctrl 
+  lis r3, 0x808D
+  ori r3, r3, 0x3900
+  stw r3, 0(r23)
+  mr r3, r24
+  addi r28, r28, 0x1
+  mr r4, r28
+  mr r5, r23
+  lis r12, 0x8063
+  ori r12, r12, 0xD278
+  mtctr r12
+  bctrl 
+  addi r3, r1, 0x20
+  stw r23, 0(r3)
+  lis r6, 0x808A
+  ori r4, r6, 0x9477
+  ori r5, r6, 0x9482
+  ori r6, r6, 0x9491
+  li r7, 0x0
+  lis r12, 0x805C
+  ori r12, r12, 0x2C60
+  mtctr r12
+  bctrl 
+  mr r3, r23
+  lis r5, 0x808A
+  ori r4, r5, 0x9477
+  ori r5, r5, 0xA007
+  lis r12, 0x8063
+  ori r12, r12, 0xD9C0
+  mtctr r12
+  bctrl 
+  stb r26, 129(r23)
+  stb r25, 130(r23)
+  lis r6, 0x808A
+  ori r3, r6, 0xF7C0
+  bl loc_0x120
+  .opword 0x000c182c
+  ori r12, r2, 0x5820
+  .op
+word 0x7840848c
+  xori r28, r4, 36864
+
+loc_0x120:
+  mflr r4
+  lbzx r4, r4, r26
+  add r5, r3, r4
+  mr r3, r23
+  ori r4, r6, 0xA7C8
+  lis r12, 0x8063
+  ori r12, r12, 0xE0F0
+  mtctr r12
+  bctrl 
+  addi r23, r23, 0x1B4
+  addi r25, r25, 0x1
+  lis r3, 0x809C
+  lwz r3, 13848(r3)
+  mulli r4, r26, 0x24
+  add r3, r3, r4
+  lwz r3, 80(r3)
+  cmpw r25, r3
+  blt+ loc_0x70
+  addi r26, r26, 0x1
+  cmpwi r26, 0xF
+  blt+ loc_0x6C
+  .opword 0x00000000
+  lfs f19, -21336(r30)
+  .opword 0x00000010
+  bctrl 
+  lwz r3, 364(r31)
+  cmpwi r3, 0x0
+  beq- loc_0x1F8
+  lwz r3, 408(r31)
+  li r4, 0xA0
+  stb r4, 184(r3)
+  lis r4, 0x4140
+  stw r4, 76(r3)
+  stw r4, 80(r3)
+  li r3, 0x1
+  stb r3, 128(r31)
+  lis r3, 0x809C
+  lwz r3, 13848(r3)
+  lbz r4, 129(r31)
+  mulli r4, r4, 0x24
+  add r3, r3, r4
+  lwz r4, 88(r3)
+  lbz r5, 130(r31)
+  cmpw r5, r4
+  bge- loc_0x1F8
+  li r4, 0x0
+  stb r4, 128(r31)
+  lwz r3, 76(r3)
+  rlwinm r4, r5, 2, 0, 29
+  lwzx r3, r3, r4
+  addi r4, r3, 0x44
+  lswi r5, r4, 12
+  addi r4, r31, 0x19C
+  stswi r5, r4, 12
+
+loc_0x1F8:
+}
+
+
+
+
 //Disable HUD [Bully]
 static void DisableHUD() {
 	u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_DISABLEHUD);
