@@ -79,65 +79,6 @@ kmWrite32(0x80856A28, 0x48000050);
 //Can Always Drift [Supastarrio]
 kmWrite32(0x808B5B1C, 0x00000000);
 
-//ENHANCED GHOST REPLAY
-//Enhanced Ghost Replay [MrBean] #1
-kmCallDefAsm(0x8062CCDC) {
-loc_0x0:
-  li r4, 0xD
-  lis r5, 0x8062
-  addi r5, r5, 0x2D08
-  mtctr r5
-  bctrl 
-  lis r5, 0x809C
-  lwz r5, 7736(r5)
-  lwz r5, 0(r5)
-  lwz r6, 228(r5)
-  stw r6, 188(r5)
-  lwz r6, 60(r5)
-  stw r6, 228(r5)
-  li r6, 0x0
-  stw r6, 60(r5)
-  mr r3, r31
-  li r4, 0x3A
-
-//Enhanced Ghost Replay [MrBean] #2
-
-kmCallDefAsm(0x80633C00) {
-loc_0x0:
-  cmpwi r0, 0x34
-  bnelr- 
-  li r3, 0x1F
-  lis r4, 0x809C
-  lwz r4, 7736(r4)
-  lwz r4, 0(r4)
-  lwz r4, 228(r4)
-  li r5, 0x5
-  stw r5, 8(r4)
-  li r5, 0x37
-  stw r5, 68(r4)
-  li r5, 0x0
-  stw r5, 28(r4)
-  stw r5, 32(r4)
-  lwz r4, 0(r4)
-  mflr r6
-  bl loc_0x60
-  lwz r4, 68(r3)
-  cmpwi r4, 0x37
-  bne- loc_0x58
-  li r5, 0x2D
-  stw r5, 68(r3)
-
-loc_0x58:
-  mr r3, r4
-  blr 
-
-loc_0x60:
-  mflr r5
-  mtlr r6
-  stw r5, 16(r4)
-  blr 
-}
-
 //Disable HUD [Bully]
 static void DisableHUD() {
 	u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_DISABLEHUD);
