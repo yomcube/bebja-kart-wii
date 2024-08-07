@@ -76,35 +76,6 @@ kmWrite16(0x8083A7B6, 0x00004E20);
 //Allow pausing before the race starts [Sponge]
 kmWrite32(0x80856A28, 0x48000050);
 
-//Show Quit Confirmation Screen in Single Player [CLF78]
-kmCallDefAsm(0x8062C66C) {
-    loc_0x0:
-        mr r3, r31
-        li r4, 0x2C
-        lis r12, 0x8062
-        ori r12, r12, 0x2D08
-        mtctr r12
-        bctrl 
-        mr r3, r31
-}
-kmCallDefAsm(0x8062C7B0) {
-    loc_0x0:
-        mr r3, r31
-        li r4, 0x2C
-        lis r12, 0x8062
-        ori r12, r12, 0x2D08
-        mtctr r12
-        bctrl 
-        mr r3, r31
-}
-
-//480p Graphics Fix
-kmCallDefAsm(0x801BCDDC) {
-loc_0x0:
-  li r3, 0x3
-  stb r3, 25(r1)
-}
-
 //Mirror Mode TTs
 static void MirrorModeTTs() {
 u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS
