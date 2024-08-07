@@ -76,9 +76,6 @@ kmWrite16(0x8083A7B6, 0x00004E20);
 //Allow pausing before the race starts [Sponge]
 kmWrite32(0x80856A28, 0x48000050);
 
-//Can Always Drift [Supastarrio]
-kmWrite32(0x808B5B1C, 0x00000000);
-
 //Disable HUD [Bully]
 static void DisableHUD() {
 	u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_DISABLEHUD);
