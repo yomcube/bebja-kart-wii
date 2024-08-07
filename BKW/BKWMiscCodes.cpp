@@ -99,7 +99,6 @@ loc_0x0:
   stw r6, 60(r5)
   mr r3, r31
   li r4, 0x3A
-}
 
 //Enhanced Ghost Replay [MrBean] #2
 
