@@ -98,7 +98,12 @@ kmCallDefAsm(0x8062C7B0) {
         mr r3, r31
 }
 
-
+//480p Graphics Fix
+kmCallDefAsm(0x801BCDDC) {
+loc_0x0:
+  li r3, 0x3
+  stb r3, 25(r1)
+}
 
 
 
