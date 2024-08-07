@@ -105,10 +105,14 @@ loc_0x0:
   stb r3, 25(r1)
 }
 
-
-
-
-
+//Mirror Mode TTs
+static void MirrorModeTTs() {
+u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS
+if (dis!= 1) {
+asm("loc_0x0: cmpwi r24, 0x2; bne- loc_0xC; li r7, 0x1; loc_0xC: stw r7, 2960(r31);");
+}
+}
+kmCalll(0x8053056C, MirrorModeTTs);
 
 
 
