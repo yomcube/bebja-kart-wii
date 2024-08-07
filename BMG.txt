@@ -206,7 +206,12 @@
   5805  = Grand Prix will be 64 races each.
   5806  = Grand Prix will be 2 races each.
   6000  = Show HUD
+  6001  = Mirror Mode TTs
   6010  = Enabled
   6011  = Disabled
+  6020  = Disabled
+  6021  = Enabled
   6100  = The HUD will be shown normally.
   6101  = The HUD will not be shown.
+  6200  = Mirror Mode Time Trials will be disabled.
+  6201  = Mirror Mode Time Trials will be enabled.
