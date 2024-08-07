@@ -78,12 +78,12 @@ kmWrite32(0x80856A28, 0x48000050);
 
 //Mirror Mode TTs
 static void MirrorModeTTs() {
-u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS
-if (dis!= 1) {
-asm("loc_0x0: cmpwi r24, 0x2; bne- loc_0xC; li r7, 0x1; loc_0xC: stw r7, 2960(r31);");
+u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS);
+	if (dis!= 1) {
+		asm("loc_0x0: cmpwi r24, 0x2; bne- loc_0xC; li r7, 0x1; loc_0xC: stw r7, 2960(r31);");
+	}
 }
-}
-kmCalll(0x8053056C, MirrorModeTTs);
+kmCall(0x8053056C, MirrorModeTTs);
 
 
 
