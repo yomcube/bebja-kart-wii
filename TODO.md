@@ -37,6 +37,7 @@ C2 codes are more difficult to implement than memory patches, since they insert 
 - [ ] [Items on Minimap [stebler]](https://mariokartwii.com/showthread.php?tid=1896)
 - [ ] [Enhanced Ghost Replay [MrBean35000vr]](https://mariokartwii.com/showthread.php?tid=108)
 - [ ] [Show Quit Confirmation Screen in Single Player [CLF78]](https://mariokartwii.com/showthread.php?tid=1884)
+- [ ] [480p Graphics Fix [Leseratte]](https://mariokartwii.com/showthread.php?tid=1120)
 ### Toggable
 - [ ] [1st Person Camera View [JoshuaMK, mdmwii]](https://mariokartwii.com/showthread.php?tid=1331)
 - [ ] [Mirror Mode TTs [vabold]](https://mariokartwii.com/showthread.php?tid=1981)
