@@ -84,9 +84,7 @@ u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Ty
 				"cmpwi r24,2;"
   				 "bne end;"
   				 "li r7,1;" // this flag should always be 0 in TTs
-   				loc_0xC:
-  				  "stw r7,0xb90(r31);"
-				);
+   				  );
 			}
 		}
 kmCall(0x8053056C, MirrorModeTTs);
