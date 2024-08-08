@@ -1,7 +1,7 @@
 # bebja-kart-wii
 
 ## Unsorted
-[Double Framerate](https://www.youtube.com/watch?v=Yw4CmP9qeZU)
+
 
 ## Simple Memory Patches
 Memory patches are simple to implement, since they can be implemented with a simple `kmWriteX`, where `X` is the type of integer that the code patches.
@@ -29,6 +29,7 @@ Memory patches are simple to implement, since they can be implemented with a sim
 - [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482)
 - [ ] [No Voice Sounds (Online) [davidevgen]](https://mariokartwii.com/showthread.php?tid=483)
 - [ ] [Mario Kart 8 Drifting Camera [fishguy]](https://mariokartwii.com/showthread.php?tid=1632)
+- [ ] [Double Framerate [MrBean35000vr]](https://www.youtube.com/watch?v=Yw4CmP9qeZU)
 
 ## C2 Codes
 C2 codes are more difficult to implement than memory patches, since they insert assembly code.
