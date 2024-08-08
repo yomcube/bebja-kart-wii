@@ -20,10 +20,8 @@ Memory patches are simple to implement, since they can be implemented with a sim
 - [x] [Remove Mushroom Bug [Vega]](https://mariokartwii.com/showthread.php?tid=909)
 - [x] [Change VR Limit [XeR]](https://mariokartwii.com/showthread.php?tid=225)
 - [x] [Never Burn Out [JoshuaMK]](https://mariokartwii.com/showthread.php?tid=1367)
-- [ ] [Faster Points Increase [CLF78] (Code doesn't work!)](https://mariokartwii.com/showthread.php?tid=1858) 
-- [ ] [Colored Minimap](https://mariokartwii.com/showthread.php?tid=2036)
 - [ ] [All Items can Land (v2) [MrBean, CLF78]](https://mariokartwii.com/showthread.php?tid=1720)
-- [ ] [Allow Pausing before the Race Starts [Sponge]](https://mariokartwii.com/showthread.php?tid=2108)
+- [x] [Allow Pausing before the Race Starts [Sponge]](https://mariokartwii.com/showthread.php?tid=2108)
 ### Toggable
 - [x] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
 - [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482)
