@@ -4,7 +4,7 @@
 #include <MarioKartWii/Item/ItemBehaviour.hpp>
 #include <PulsarEngine/SlotExpansion/CupsConfig.hpp>
 
-namespace VP {
+namespace BKW {
 namespace Race {
 static int UseItem(Kart::Collision *kartCollision, ItemId id){
     u8 playerId = kartCollision->link.GetPlayerIdx();
@@ -56,4 +56,4 @@ kmWrite32(0x80790EF8, 0x39400001);
 kmWrite32(0x80790EFC, 0x39200001);
 //kmWritePointer(0x808b54e8, AllFeathersCanLand); Already done in Pulsar
 } // namespace Race
-} // namespace VP
+} // namespace BKW
