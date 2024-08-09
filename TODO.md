@@ -20,7 +20,6 @@ Memory patches are simple to implement, since they can be implemented with a sim
 - [x] [Remove Mushroom Bug [Vega]](https://mariokartwii.com/showthread.php?tid=909)
 - [x] [Change VR Limit [XeR]](https://mariokartwii.com/showthread.php?tid=225)
 - [x] [Never Burn Out [JoshuaMK]](https://mariokartwii.com/showthread.php?tid=1367)
-- [ ] [All Items can Land (v2) [MrBean, CLF78]](https://mariokartwii.com/showthread.php?tid=1720)
 - [x] [Allow Pausing before the Race Starts [Sponge]](https://mariokartwii.com/showthread.php?tid=2108)
 ### Toggable
 - [x] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
@@ -46,6 +45,7 @@ C2 codes are more difficult to implement than memory patches, since they insert 
       
 ## Pulsar Mods
 - [x] [Accurate Item Roulete [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/Roulette.cpp)
+- [ ] [All Items can Land [Brawlboxgaming]](https://discord.com/channels/1207775700883476580/1219695219063263273/1219695219063263273)
 
 ## GCT
 See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2Nzi6K0l196_nXZkIPyEdXMTc7s/edit?pli=1&gid=1019452145#gid=1019452145) for active codes.  
