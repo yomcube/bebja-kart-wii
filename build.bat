@@ -23,6 +23,7 @@ SET "CC=CW\mwcceppc.exe"
 SET "RIIVO="
 
 :: Compiler flags and folder
+echo test
 SET CFLAGS=-I- -i %ENGINE% -i %GAMESOURCE% -i %PULSAR% -i %BKW% ^
   -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4 %cwDWARF%
 SET DEFINE=
@@ -45,13 +46,13 @@ SET OBJECTS=
 set _stderr=stderr.txt
 FOR %%H IN (%CPPFILES%) DO (
     ::echo "Compiling %%H..."
-echo test
+echo test 2
     %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2>> %_stderr%
     type %_stderr%
     
     :: https://stackoverflow.com/a/1199839
     FOR /F "usebackq" %%A IN ('%_stderr%') DO set size=%%~zA
-echo test 2
+echo test 3
     if %size% GTR 2 (
         echo Fatal error. Compilation aborted.
         exit /b 1
