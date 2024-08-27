@@ -76,14 +76,18 @@ jobs:
           %CC% %CFLAGS% -c -o "build/kamek.o" "%ENGINE%\kamek.cpp"
           
           SET OBJECTS=
+
+          set _stderr=stderr.txt
           FOR %%H IN (%CPPFILES%) DO (
               ::echo "Compiling %%H..."
-              %CC% %CFLAGS% %DEFINE% -c -o "build/%%~nH.o" "%%H"
-              if not errorlevel 0 (
-                  echo Compilation error. Aborting script...
-                  exit /b 1
-              )
+              %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2> %_stderr%
               SET "OBJECTS=build/%%~nH.o !OBJECTS!"
+          )
+          :: https://stackoverflow.com/a/1199839
+          FOR /F "usebackq" %%A IN ('%_stderr%') DO set size=%%~zA
+          if %size% GTR 2 (
+              echo Error. Compilation aborted.
+              exit /b 1
           )
           
           :: Link
