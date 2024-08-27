@@ -76,6 +76,10 @@ kmWrite16(0x8083A7B6, 0x00004E20);
 //Allow pausing before the race starts [Sponge]
 kmWrite32(0x80856A28, 0x48000050);
 
+//Green/Red Shells Never Break [Hamster35000vr]
+kmWrite32(0x807B5E58, 60000000);
+
+
 //Mega Mushroom Increased FOV [TheLordScruffy]
 kmCallDefAsm(0x805793) {
 loc_0x0:
