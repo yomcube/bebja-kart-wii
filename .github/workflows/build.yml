@@ -32,7 +32,7 @@ jobs:
 
       - name: Build BKW
         shell: cmd
-        run: build.bat
+        run: BKW_\build.bat
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
