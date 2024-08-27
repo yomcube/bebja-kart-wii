@@ -45,11 +45,13 @@ SET OBJECTS=
 set _stderr=stderr.txt
 FOR %%H IN (%CPPFILES%) DO (
     ::echo "Compiling %%H..."
+echo test
     %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2>> %_stderr%
     type %_stderr%
     
     :: https://stackoverflow.com/a/1199839
     FOR /F "usebackq" %%A IN ('%_stderr%') DO set size=%%~zA
+echo test 2
     if %size% GTR 2 (
         echo Fatal error. Compilation aborted.
         exit /b 1
