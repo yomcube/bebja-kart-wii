@@ -45,10 +45,10 @@ SET OBJECTS=
 set _stderr=stderr.txt
 FOR %%H IN (%CPPFILES%) DO (
     ::echo "Compiling %%H..."
-    %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2> %_stderr%
-    type %_stderr%
+    %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2>> %_stderr%
     SET "OBJECTS=build/%%~nH.o !OBJECTS!"
 )
+type %_stderr%
 :: https://stackoverflow.com/a/1199839
 FOR /F "usebackq" %%A IN ('%_stderr%') DO set size=%%~zA
 if %size% GTR 2 (
