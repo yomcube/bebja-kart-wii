@@ -31,7 +31,8 @@ jobs:
           curl -o CW/mwldeppc.exe -fSL ${{ secrets.CW_LINK }}/mwldeppc.exe
 
       - name: Build BKW
-        run: .\build.bat
+        shell: cmd
+        run: build.bat
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
