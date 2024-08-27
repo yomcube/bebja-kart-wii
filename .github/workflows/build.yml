@@ -87,7 +87,7 @@ jobs:
           :: https://stackoverflow.com/a/1199839
           FOR /F "usebackq" %%A IN ('%_stderr%') DO set size=%%~zA
           if %size% GTR 2 (
-              echo Error. Compilation aborted.
+              echo [97m[41m[4m Fatal error.[24m[40m[101m Compilation aborted.
               exit /b 1
           )
           
