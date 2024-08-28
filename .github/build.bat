@@ -43,17 +43,19 @@ for /R %PULSAR% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
 SET OBJECTS=
 
 set _stderr=stderr.txt
+set _errs=errs.txt
 FOR %%H IN (%CPPFILES%) DO (
     set f=%%H
     echo !f:%CD%\=!
 
-    %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2>> %_stderr%
+    %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2> %_stderr%
+    type %_stderr% >> %_errs%
+    type %_stderr%
     SET "OBJECTS=build/%%~nH.o !OBJECTS!"
 )
-type %_stderr%
 
 :: https://stackoverflow.com/a/1199839
-FOR /F "usebackq" %%A IN ('%_stderr%') DO set size=%%~zA
+FOR /F "usebackq" %%A IN ('%_errs%') DO set size=%%~zA
 if %size% GTR 2 (
     echo Fatal error. Compilation aborted.
     exit /b 1
