@@ -66,7 +66,7 @@ goto :end
 FOR /F "usebackq" %%A IN ('%_errs%') DO set size=%%~zA
 if %size% GTR 2 (
     echo Fatal error. Compilation aborted.
-    exit /b 1
+    exit 1
 )
 
 :end
