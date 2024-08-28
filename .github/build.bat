@@ -63,11 +63,10 @@ goto :end
 
 :ErrCheck
 :: https://stackoverflow.com/a/1199839
-FOR /F "usebackq" %%A IN ('%_errs%') DO set size=%%~zA
-if %size% GTR 2 (
+find "# Error: " %_errs%
+if errorlevel 1 (
     echo Fatal error. Compilation aborted.
     exit 1
-)
-
+) 
 :end
 ENDLOCAL
