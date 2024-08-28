@@ -45,7 +45,7 @@ SET OBJECTS=
 set _stderr=stderr.txt
 FOR %%H IN (%CPPFILES%) DO (
     set f=%%H
-    set "f=!f:%CD%=!"
+	  echo !f:%CD%\=!
     echo Compiling %f%...
 
     %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2>> %_stderr%
