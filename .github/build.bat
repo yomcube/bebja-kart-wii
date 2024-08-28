@@ -49,7 +49,7 @@ FOR %%H IN (%CPPFILES%) DO (
     echo !f:%CD%\=!
 
     %CC% %CFLAGS% %DEFINE% -stderr -c -o "build/%%~nH.o" "%%H" 2> %_stderr%
-    type %_stderr% >> %_errs%
+    type %_stderr% > %_errs%
     type %_stderr%
     SET "OBJECTS=build/%%~nH.o !OBJECTS!"
     Call :ErrCheck
