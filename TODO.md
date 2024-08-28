@@ -80,4 +80,4 @@ See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2N
 - [ ] Colored Minimaps / Speedometer
 - [ ] An Input Display from MKW-SP
     - MKW-SP has an entirely different system than Pulsar.
-- [ ] Toggle between [Wiimmfi](https://wiimmfi.de) and [WiiLink](https://www.wiilink24.com)
+- [ ] Implement [WiiLink](https://www.wiilink24.com) 
