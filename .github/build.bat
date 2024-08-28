@@ -69,7 +69,7 @@ FOR %%H IN (!%1!) DO (
 
 :ErrCheck
 :: https://stackoverflow.com/a/1199839
-FOR /F "usebackq" %%A IN ('%_errs') DO set size=%%~zA
+FOR /F "usebackq" %%A IN ('%_errs%') DO set size=%%~zA
 if %size% GTR 2 (
     echo Fatal error. Compilation aborted.
     exit /b 1
