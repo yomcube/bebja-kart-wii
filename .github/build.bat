@@ -44,7 +44,7 @@ SET OBJECTS=
 
 set _stderr=stderr.txt
 set _errs=errs.txt
-FOR %%H IN (%CPPFILES) DO (
+FOR %%H IN (%CPPFILES%) DO (
     set f=%%H
     echo !f:%CD%\=!
 
