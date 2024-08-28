@@ -95,7 +95,6 @@ loc_0x0:
 		stw r0, 288(r29)
 
 		loc_0x28:
-}
 
 //Mirror Mode TTs
 static void MirrorModeTTs() {
