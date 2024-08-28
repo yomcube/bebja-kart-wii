@@ -34,36 +34,29 @@ if "!CC!" == "" (
 
 :: CPP Sources
 SET BKWFILES=
-for /R %BKW% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
+for /R %BKW% %%f in (*.cpp) do SET "BKWFILES=%%f !CPPFILES!"
 SET CPPFILES=
-for /R %PULSAR% %%f in (*.cpp) do SET "BKWFILES=%%f !CPPFILES!"
+for /R %PULSAR% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
 
 :: Compile CPP
 %CC% %CFLAGS% -c -o "build/kamek.o" "%ENGINE%\kamek.cpp"
 
 SET OBJECTS=
-call :Compile BKWFILES
-call :Compile CPPFILES
 
-:: https://stackoverflow.com/a/1199839
-FOR /F "usebackq" %%A IN ('%_errs%') DO set size=%%~zA
-if %size% GTR 2 (
-    echo Fatal error. Compilation aborted.
-    exit /b 1
-)
+Call :Compile %BKWFILES%
+Call :Compile %CPPFILES%
+
 
 :: Link
 echo Linking... %time%
 ".\KamekLinker\Kamek.exe" "build/kamek.o" %OBJECTS% %debug% -dynamic -externals="%GAMESOURCE%/symbols.txt" -versions="%GAMESOURCE%/versions.txt" -output-combined=build\Code.pul
+goto :end
 
-:end
-ENDLOCAL
-
-:Compile
-SETLOCAL EnableDelayedExpansion
 set _stderr=stderr.txt
 set _errs=errs.txt
-FOR %%H IN (!%1!) DO (
+
+:Compile
+FOR %%H IN (%*) DO (
     set f=%%H
     echo !f:%CD%\=!
 
@@ -71,5 +64,16 @@ FOR %%H IN (!%1!) DO (
     type %_stderr% >> %_errs%
     type %_stderr%
     SET "OBJECTS=build/%%~nH.o !OBJECTS!"
+    Call :ErrCheck
 )
+
+:ErrCheck
+:: https://stackoverflow.com/a/1199839
+FOR /F "usebackq" %%A IN ('%_errs') DO set size=%%~zA
+if %size% GTR 2 (
+    echo Fatal error. Compilation aborted.
+    exit /b 1
+)
+
+:end
 ENDLOCAL
