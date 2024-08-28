@@ -43,8 +43,8 @@ for /R %PULSAR% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
 
 SET OBJECTS=
 
-Call :Compile %BKWFILES%
-Call :Compile %CPPFILES%
+call :Compile BKWFILES
+call :Compile CPPFILES
 
 
 :: Link
@@ -56,7 +56,7 @@ set _stderr=stderr.txt
 set _errs=errs.txt
 
 :Compile
-FOR %%H IN (%*) DO (
+FOR %%H IN (!%1!) DO (
     set f=%%H
     echo !f:%CD%\=!
 
