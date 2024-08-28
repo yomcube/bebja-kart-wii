@@ -95,21 +95,8 @@ loc_0x0:
 		stw r0, 288(r29)
 
 		loc_0x28:
-
-//Mirror Mode TTs
-static void MirrorModeTTs() {
-u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS);
-	if (dis!= 1) {
-		asm(
-			"cmpwi r24,2;"
-			"bne end;"
-			"li r7,1;"
-			"end:"
-			"stw r7,0xb90(r31);"
-		);
-	}
 }
-kmCall(0x8053056C, MirrorModeTTs);
+
 
 //Disable HUD [Bully]
 static void DisableHUD() {
