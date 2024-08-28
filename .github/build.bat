@@ -63,8 +63,8 @@ goto :end
 
 :ErrCheck
 :: https://stackoverflow.com/a/1199839
-find "# Error: " %_errs%
-if errorlevel 1 (
+find "# Error: " %_errs% >nul
+if errorlevel 0 (
     echo Fatal error. Compilation aborted.
     exit 1
 ) 
