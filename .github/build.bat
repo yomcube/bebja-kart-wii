@@ -52,7 +52,7 @@ FOR %%H IN (%CPPFILES%) DO (
     type %_stderr% > %_errs%
     type %_stderr%
     SET "OBJECTS=build/%%~nH.o !OBJECTS!"
-    Call :ErrCheck
+    call :ErrCheck
 )
 
 
@@ -61,7 +61,11 @@ echo Linking... %time%
 ".\KamekLinker\Kamek.exe" "build/kamek.o" %OBJECTS% %debug% -dynamic -externals="%GAMESOURCE%/symbols.txt" -versions="%GAMESOURCE%/versions.txt" -output-combined=build\Code.pul
 goto :end
 
+:SetErrLevel
+exit /b 128
+
 :ErrCheck
+call :SetErrLevel
 findstr /B /R /C:"# Error: " "%_errs%"
 if errorlevel 0 (
     echo Fatal error. Compilation aborted.
