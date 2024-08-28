@@ -33,30 +33,18 @@ if "!CC!" == "" (
 )
 
 :: CPP Sources
-SET BKWFILES=
-for /R %BKW% %%f in (*.cpp) do SET "BKWFILES=%%f !CPPFILES!"
 SET CPPFILES=
 for /R %PULSAR% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
+for /R %BKW% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
 
 :: Compile CPP
 %CC% %CFLAGS% -c -o "build/kamek.o" "%ENGINE%\kamek.cpp"
 
 SET OBJECTS=
 
-call :Compile BKWFILES
-call :Compile CPPFILES
-
-
-:: Link
-echo Linking... %time%
-".\KamekLinker\Kamek.exe" "build/kamek.o" %OBJECTS% %debug% -dynamic -externals="%GAMESOURCE%/symbols.txt" -versions="%GAMESOURCE%/versions.txt" -output-combined=build\Code.pul
-goto :end
-
 set _stderr=stderr.txt
 set _errs=errs.txt
-
-:Compile
-FOR %%H IN (!%1!) DO (
+FOR %%H IN (%CPPFILES) DO (
     set f=%%H
     echo !f:%CD%\=!
 
@@ -66,6 +54,12 @@ FOR %%H IN (!%1!) DO (
     SET "OBJECTS=build/%%~nH.o !OBJECTS!"
     Call :ErrCheck
 )
+
+
+:: Link
+echo Linking... %time%
+".\KamekLinker\Kamek.exe" "build/kamek.o" %OBJECTS% %debug% -dynamic -externals="%GAMESOURCE%/symbols.txt" -versions="%GAMESOURCE%/versions.txt" -output-combined=build\Code.pul
+goto :end
 
 :ErrCheck
 :: https://stackoverflow.com/a/1199839
