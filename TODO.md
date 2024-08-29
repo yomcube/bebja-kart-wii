@@ -21,7 +21,7 @@ Memory patches are simple to implement, since they can be implemented with a sim
 - [x] [Change VR Limit [XeR]](https://mariokartwii.com/showthread.php?tid=225)
 - [x] [Never Burn Out [JoshuaMK]](https://mariokartwii.com/showthread.php?tid=1367)
 - [x] [Allow Pausing before the Race Starts [Sponge]](https://mariokartwii.com/showthread.php?tid=2108)
-- [ ] Green/Red Shells Never Break [Hamster35000vr](https://mariokartwii.com/showthread.php?tid=1608)
+- [ ] [Green/Red Shells Never Break [Hamster35000vr]](https://mariokartwii.com/showthread.php?tid=1608)
 ### Toggable
 - [x] [Disable HUD [Bully]](https://mariokartwii.com/showthread.php?tid=60)
 - [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482)
