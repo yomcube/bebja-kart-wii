@@ -52,8 +52,8 @@ jobs:
           CC="CW/mwcceppc.exe"
           
           # Compiler flags and folder
-          CFLAGS=-I- -i "$ENGINE" -i "$GAMESOURCE" -i "$PULSAR" -i "$BKW" \
-            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4
+          CFLAGS="-I- -i \"$ENGINE\" -i \"$GAMESOURCE\" -i \"$PULSAR\" -i \"$BKW\" \
+            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4"
                     
           if [ "$CC" == "" ]; then
               echo "You need to specify the path to CodeWarrior by setting the CC variable"
