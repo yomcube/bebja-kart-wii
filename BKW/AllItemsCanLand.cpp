@@ -9,7 +9,7 @@ namespace Race {
 static int UseItem(Kart::Collision *kartCollision, ItemId id){
     u8 playerId = kartCollision->link.GetPlayerIdx();
     Item::Manager::sInstance->players[playerId].inventory.currentItemCount++;
-    Item::Behavior::itemBehaviourTable[id].useFunction(Item::Manager::sInstance->players[playerId]);
+    Item::Behavior::behaviourTable[id].useFunction(Item::Manager::sInstance->players[playerId]);
     return -1;
 }
 
