@@ -31,63 +31,52 @@ jobs:
           curl -o CW/mwldeppc.exe -fSL ${{ secrets.CW_LINK }}/mwldeppc.exe
 
       - name: Build BKW
-        shell: cmd
+        shell: bash
         run: | 
-          @echo off
-          SETLOCAL EnableDelayedExpansion
-          
           git clone https://github.com/MelgMKW/Pulsar.git Pulsar
-          move CW Pulsar
+          mv CW Pulsar/CW
           cd BKW_
-          move BKW ..\Pulsar
-          move /Y PulsarEngine\Race\200cc.cpp ..\Pulsar\PulsarEngine\Race\200cc.cpp
+          mv BKW ../Pulsar/BKW
+          mv PulsarEngine/Race/200cc.cpp ../Pulsar/PulsarEngine/Race/200cc.cpp
           cd ..\Pulsar
           
-          del /F /Q /S build
+          rm -rf build
           mkdir build
           
-          SET "ENGINE=.\KamekInclude"
-          set "GAMESOURCE=.\GameSource"
-          SET "PULSAR=.\PulsarEngine"
-          SET "BKW=.\BKW"
+          ENGINE="KamekInclude"
+          GAMESOURCE="GameSource"
+          PULSAR="PulsarEngine"
+          BKW="BKW"
           
-          :: Change this as necessary depending on where you put CodeWarrior
-          SET "CC=CW\mwcceppc.exe"
+          # Change this as necessary depending on where you put CodeWarrior
+          CC="CW/mwcceppc.exe"
           
-          :: Riivolution Destination (change as necessary)
-          SET "RIIVO="
+          # Compiler flags and folder
+          CFLAGS=-I- -i "$ENGINE" -i "$GAMESOURCE" -i "$PULSAR" -i "$BKW" \
+            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4
+                    
+          if [ "$CC" == "" ]; then
+              echo "You need to specify the path to CodeWarrior by setting the CC variable"
+              exit 1
+          fi
           
-          :: Compiler flags and folder
-          SET CFLAGS=-I- -i %ENGINE% -i %GAMESOURCE% -i %PULSAR% -i %BKW% ^
-            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4 %cwDWARF%
-          SET DEFINE=
+          # CPP Sources
+          CPPFILES=$(ls "$BKW/*.cpp") $(ls "$PULSAR/*.cpp")
           
-          if "!CC!" == "" (
-              echo You need to specify the path to CodeWarrior by setting the CC variable
-              exit /b 1
-          )
+          # Compile CPP
+          $CC $CFLAGS -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
           
-          :: CPP Sources
-          SET CPPFILES=
-          for /R %BKW% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
-          for /R %PULSAR% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
+          for f in "$CPPFILES"; do
+              #echo "Compiling $f..."
+              $CC $CFLAGS $DEFINE -c -o "build/${f%.cpp}.o" "$f"
+              OBJECTS="build/${f%.cpp}.o" "$OBJECTS"
+          done
           
-          :: Compile CPP
-          %CC% %CFLAGS% -c -o "build/kamek.o" "%ENGINE%\kamek.cpp"
+          # Link
+          echo Linking...
+          date -u
+          "./KamekLinker/Kamek.exe" "build/kamek.o" "$OBJECTS" -dynamic -externals="$GAMESOURCE/symbols.txt" -versions="$GAMESOURCE/versions.txt" -output-combined=build\Code.pul
           
-          SET OBJECTS=
-          FOR %%H IN (%CPPFILES%) DO (
-              ::echo "Compiling %%H..."
-              %CC% %CFLAGS% %DEFINE% -c -o "build/%%~nH.o" "%%H"
-              SET "OBJECTS=build/%%~nH.o !OBJECTS!"
-          )
-          
-          :: Link
-          echo Linking... %time%
-          ".\KamekLinker\Kamek.exe" "build/kamek.o" %OBJECTS% %debug% -dynamic -externals="%GAMESOURCE%/symbols.txt" -versions="%GAMESOURCE%/versions.txt" -output-combined=build\Code.pul
-          
-          :end
-          ENDLOCAL
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
