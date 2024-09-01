@@ -59,7 +59,9 @@ jobs:
               echo "You need to specify the path to CodeWarrior by setting the CC variable"
               exit 1
           fi
-          
+
+          # DEBUG
+          ls
           # CPP Sources
           CPPFILES=$(ls "$BKW/*.cpp") $(ls "$PULSAR/*.cpp")
           
