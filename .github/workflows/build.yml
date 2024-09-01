@@ -52,7 +52,7 @@ jobs:
           CC="CW/mwcceppc.exe"
           
           # Compiler flags and folder
-          CFLAGS="-I- -i \"$ENGINE\" -i \"$GAMESOURCE\" -i \"$PULSAR\" -i \"$BKW\" \
+          CFLAGS="-I- -i $ENGINE -i $GAMESOURCE -i $PULSAR -i $BKW \
             -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4"
                     
           if [ "$CC" == "" ]; then
@@ -63,14 +63,14 @@ jobs:
           # DEBUG
           ls
           # CPP Sources
-          CPPFILES=$(ls "$BKW/*.cpp") $(ls "$PULSAR/*.cpp")
+          CPPFILES=$(ls BKW/**.cpp) $(ls $PULSAR/**.cpp)
           
           # Compile CPP
           $CC $CFLAGS -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
           
-          for f in "$CPPFILES"; do
+          for f in $CPPFILES; do
               #echo "Compiling $f..."
-              $CC $CFLAGS $DEFINE -c -o "build/${f%.cpp}.o" "$f"
+              $CC $CFLAGS -c -o "build/${f%.cpp}.o" "$f"
               OBJECTS="build/${f%.cpp}.o" "$OBJECTS"
           done
           
