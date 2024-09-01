@@ -27,7 +27,7 @@ Memory patches are simple to implement, since they can be implemented with a sim
 - [ ] [No Voice Sounds (Offline) [davidevgen]](https://mariokartwii.com/showthread.php?tid=482)
 - [ ] [No Voice Sounds (Online) [davidevgen]](https://mariokartwii.com/showthread.php?tid=483)
 - [ ] [Mario Kart 8 Drifting Camera [fishguy]](https://mariokartwii.com/showthread.php?tid=1632)
-- [ ] [Double Framerate [MrBean35000vr]](https://www.youtube.com/watch?v=Yw4CmP9qeZU)
+- [ ] [Double Framerate [MrBean35000vr]](https://pastebin.com/Uh53FG2M) ([Video](https://www.youtube.com/watch?v=Yw4CmP9qeZU))
 
 ## C2 Codes
 C2 codes are more difficult to implement than memory patches, since they insert assembly code.
@@ -47,7 +47,7 @@ C2 codes are more difficult to implement than memory patches, since they insert 
       
 ## Pulsar Mods
 - [x] [Accurate Item Roulete [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/Roulette.cpp)
-- [ ] [All Items can Land [Brawlboxgaming]](https://discord.com/channels/1207775700883476580/1219695219063263273/1219695219063263273)
+- [ ] [All Items can Land [Brawlboxgaming]](https://github.com/Brawlboxgaming/Variety-Pack/blob/main/code/Race/Item/AllItemsCanLand.cpp)
 
 ## GCT
 See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2Nzi6K0l196_nXZkIPyEdXMTc7s/edit?pli=1&gid=1019452145#gid=1019452145) for active codes.  
@@ -56,9 +56,7 @@ See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2N
 ## Other
 - [x] 200cc Brake Drifting in all CCs
 - [ ] **[Large project]** Homebrew Updater (Like OptPack)
-    - BKW probably won't be very popular, so adding this won't necessarily be worth the effort.
 - [ ] **[Large project]** Custom Wii Channel
-    - Like the homebrew updater, BKW probably won't be very popular, so adding this won't necessarily be worth the effort.
 - [ ] [TTs Online](https://wiki.tockdom.com/wiki/TTs_Online)
 - [ ] Settings while Pause Menu
 - [ ] That Option to change between Inside and Outside Drift Variety Pack has
@@ -68,10 +66,7 @@ See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2N
     - Unrealistic. Nobody has ever made this and will never happen unless someone is willing to make it.
 - [ ] Make ZL Button Wheelie Button
 - [ ] Make Minimap Toggable
-- [ ] Beginner staff ghosts
-    - Poor design choice, as explained below. Nevertheless, it could be added.
-      >  it is likely that many Pulsar packs get made in the future, and therefore the sheer number of staff ghosts would mean most do not get beat, making beginner staff ghosts more of a negative than a positive, as on every pack you would have to first beat these ghosts to even unlock the myriad of experts.  
-      > — Melg
+- [ ] Silver trophies (beginner staff ghosts)
 - [ ] Integration with [GhostDB](https://github.com/yomcube/GhostDB/)
     - This won't happen until GhostDB is finished. MKW-SP will have a higher integration priority, so integrating with Pulsar will have to wait until then.
 
@@ -80,4 +75,4 @@ See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2N
 - [ ] Colored Minimaps / Speedometer
 - [ ] An Input Display from MKW-SP
     - MKW-SP has an entirely different system than Pulsar.
-- [ ] Implement [WiiLink](https://www.wiilink24.com) 
+- [ ] Implement [WiiLink WFC](https://wfc.wiilink24.com) 
