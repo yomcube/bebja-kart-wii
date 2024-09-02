@@ -87,7 +87,7 @@ jobs:
           OBJECTS=$(cat objects.txt)
 
           # Symbol stuff
-          sed -i "s/itemBehaviourTable/behaviourTable/g" "$GAMESOURCE/symbols.txt"
+          sed -i "s/itemBehaviourTable/behaviourTable__Q24Item8Behavior/g" "$GAMESOURCE/symbols.txt"
           
           # Link
           echo Linking...
