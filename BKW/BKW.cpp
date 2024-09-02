@@ -17,8 +17,6 @@ void BKWPack::AfterInit() {
 	Pulsar::UI::SettingsPanel::radioButtonCount[SETTINGSTYPE_BKW] = 2;
 	// Disable HUD
 	Pulsar::UI::SettingsPanel::buttonsPerPagePerRow[SETTINGSTYPE_BKW][0] = 2;
-	// MirrorModeTTs
-        Pulsar::UI::SettingsPanel::buttonsPerPagePerRow[SETTINGSTYPE_BKW][1] = 2;
 }
 
 //Pulsar::Ghost::Manager also has a callback which can be set using SetCb

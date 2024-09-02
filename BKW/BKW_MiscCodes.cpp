@@ -7,7 +7,7 @@ namespace BKW {
 namespace MiscCodes {
 
 //Show Battle Map Icons [CLF78]
-kmWrite8(0x8088BFF7, 0x00000001);
+kmWrite8(0x8088BFF7, 1);
 
 //Allow Looking Backwards During Respawn [Ro]
 kmWrite32(0x805A228C, 0x60000000);
@@ -16,7 +16,7 @@ kmWrite32(0x805A228C, 0x60000000);
 kmWrite32(0x805A225C, 0x38800001);
 
 //Can Always Drift [Supastarrio]
-kmWrite32(0x808B5B1C, 0x00000000);
+kmWrite32(0x808B5B1C, 0);
 
 //No Bullet Bill Icon [Anarion]
 kmWrite32(0x807BA5D0, 0x60000000);
@@ -77,24 +77,22 @@ kmWrite16(0x8083A7B6, 0x00004E20);
 kmWrite32(0x80856A28, 0x48000050);
 
 //Green/Red Shells Never Break [Hamster35000vr]
-kmWrite32(0x807B5E58, 60000000);
-
+kmWrite32(0x807B5E58, 0x60000000);
 
 //Mega Mushroom Increased FOV [TheLordScruffy]
-kmCallDefAsm(0x805793) {
-loc_0x0:
+kmCallDefAsm(0x805793AC) {
 	lwz r4, 0(r28)
-		lwz r29, 36(r4)
-		cmpwi r29, 0x0
-		beq - loc_0x28
-		lwz r3, 4(r4)
-		lwz r3, 12(r3)
-		rlwinm.r3, r3, 0, 16, 16
-		beq - loc_0x28
-		lis r0, 0x41F0
-		stw r0, 288(r29)
+	lwz r29, 36(r4)
+	cmpwi r29, 0x0
+	beq - loc_0x28
+	lwz r3, 4(r4)
+	lwz r3, 12(r3)
+	rlwinm. r3, r3, 0, 16, 16
+	beq - loc_0x28
+	lis r0, 0x41F0
+	stw r0, 288(r29)
 
-		loc_0x28:
+	loc_0x28:
 }
 
 //Disable HUD [Bully]

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <PulsarSystem.hpp>
-#include <BKWCommon.hpp>
 
 namespace BKW {
 	
