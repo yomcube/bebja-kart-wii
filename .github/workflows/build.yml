@@ -38,62 +38,62 @@ jobs:
           curl -o Pulsar/CW/mwldeppc.exe -fSL ${{ secrets.CW_LINK }}/mwldeppc.exe
 
       - name: Build BKW
-        shell: bash
+        shell: cmd
         run: |
-          compile() {
-          find $1 -type f -name '*.cpp' -exec sh -c '
-            echo $1
-            f=${1##*/}
-            CW/mwcceppc.exe -I- -i KamekInclude -i GameSource -i PulsarEngine -i BKW \
-              -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 \
-              -maxerrors 1 -func_align 4 -c -o build/${f%.cpp}.o $1
-            echo -n "build/${f%.cpp}.o " >> objects.txt' sh '{}' ';'
-          }
+          @echo off
+          SETLOCAL EnableDelayedExpansion
           
           cd BKW_
-          mv BKW ../Pulsar/BKW
-          mv PulsarEngine/Race/200cc.cpp ../Pulsar/PulsarEngine/Race/200cc.cpp
-          mv symbols.txt ../Pulsar/symbols.txt
-          cd ../Pulsar
+          move BKW ..\Pulsar
+          move /Y PulsarEngine\Race\200cc.cpp ..\Pulsar\PulsarEngine\Race\200cc.cpp
+          move symbols.txt ..\Pulsar\symbols.txt
+          cd ..\Pulsar
           
-          rm -rf build
+          del /F /Q /S build
           mkdir build
           
-          ENGINE="KamekInclude"
-          GAMESOURCE="GameSource"
-          PULSAR="PulsarEngine"
-          BKW="BKW"
+          SET "ENGINE=.\KamekInclude"
+          set "GAMESOURCE=.\GameSource"
+          SET "PULSAR=.\PulsarEngine"
+          SET "BKW=.\BKW"
           
-          # Change this as necessary depending on where you put CodeWarrior
-          CC="CW/mwcceppc.exe"
+          :: Change this as necessary depending on where you put CodeWarrior
+          SET "CC=CW\mwcceppc.exe"
           
-          # Compiler flags and folder
-          CFLAGS="-I- -i $ENGINE -i $GAMESOURCE -i $PULSAR -i $BKW \
-            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4"
-                    
-          if [ "$CC" == "" ]; then
-              echo "You need to specify the path to CodeWarrior by setting the CC variable"
-              exit 1
-          fi
+          :: Riivolution Destination (change as necessary)
+          SET "RIIVO="
           
-          # Compile CPP
-          $CC $CFLAGS -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
-
-          compile BKW
-          compile PulsarEngine
-
-          echo "objects.txt:"
-          cat objects.txt
-
-          OBJECTS=$(cat objects.txt)
-
-          # Symbol stuff
-          sed -i "s/itemBehaviourTable/behaviourTable__Q24Item8Behavior/g" "$GAMESOURCE/symbols.txt"
+          :: Compiler flags and folder
+          SET CFLAGS=-I- -i %ENGINE% -i %GAMESOURCE% -i %PULSAR% -i %BKW% ^
+            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4 %cwDWARF%
+          SET DEFINE=
           
-          # Link
-          echo Linking...
-          date -u
-          "./KamekLinker/Kamek.exe" "build/kamek.o" $OBJECTS -dynamic -externals="symbols.txt" -versions="$GAMESOURCE/versions.txt" -output-combined=build/Code.pul
+          if "!CC!" == "" (
+              echo You need to specify the path to CodeWarrior by setting the CC variable
+              exit /b 1
+          )
+          
+          :: CPP Sources
+          SET CPPFILES=
+          for /R %BKW% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
+          for /R %PULSAR% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
+          
+          :: Compile CPP
+          %CC% %CFLAGS% -c -o "build/kamek.o" "%ENGINE%\kamek.cpp"
+          
+          SET OBJECTS=
+          FOR %%H IN (%CPPFILES%) DO (
+              echo %%H
+              %CC% %CFLAGS% %DEFINE% -c -o "build/%%~nH.o" "%%H"
+              SET "OBJECTS=build/%%~nH.o !OBJECTS!"
+          )
+          
+          :: Link
+          echo Linking... %time%
+          ".\KamekLinker\Kamek.exe" "build/kamek.o" %OBJECTS% %debug% -dynamic -externals="symbols.txt" -versions="%GAMESOURCE%/versions.txt" -output-combined=build\Code.pul
+          
+          :end
+          ENDLOCAL
           
 
       - name: Upload artifact
