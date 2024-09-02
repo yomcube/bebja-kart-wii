@@ -33,16 +33,6 @@ jobs:
       - name: Build BKW
         shell: bash
         run: |
-          compile() {
-          find $1 -type f -name '*.cpp' -exec sh -c '
-            echo $1
-            f=${1##*/}
-            CW/mwcceppc.exe -I- -i KamekInclude -i GameSource -i PulsarEngine -i BKW \
-              -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 \
-              -maxerrors 1 -func_align 4 -c -o build/${f%.cpp}.o $1
-            echo -n "build/${f%.cpp}.o " >> objects.txt' sh '{}' ';'
-          }
-          
           git clone https://github.com/MelgMKW/Pulsar.git Pulsar
           mv CW Pulsar/CW
           cd BKW_
@@ -53,46 +43,29 @@ jobs:
           rm -rf build
           mkdir build
           
-          ENGINE="KamekInclude"
-          GAMESOURCE="GameSource"
-          PULSAR="PulsarEngine"
-          BKW="BKW"
-          
-          # Change this as necessary depending on where you put CodeWarrior
-          CC="CW/mwcceppc.exe"
-          
-          # Compiler flags and folder
-          CFLAGS="-I- -i $ENGINE -i $GAMESOURCE -i $PULSAR -i $BKW \
-            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4"
-                    
-          if [ "$CC" == "" ]; then
-              echo "You need to specify the path to CodeWarrior by setting the CC variable"
-              exit 1
-          fi
-          
           # Compile CPP
-          $CC $CFLAGS -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
+          CW/mwcceppc.exe -I- -i KamekInclude -opt all -inline auto -enum int \
+            -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4 \
+            -c -o "build/kamek.o" "KamekInclude/kamek.cpp"
 
+          compile() {
+          find $1 -type f -name '*.cpp' -exec sh -c '
+            echo $1
+            f=${1##*/}
+            CW/mwcceppc.exe -I- -i KamekInclude -i GameSource -i PulsarEngine -i BKW \
+              -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 \
+              -maxerrors 1 -func_align 4 -c -o build/${f%.cpp}.o $1
+            echo -n "build/${f%.cpp}.o " >> objects.txt' sh '{}' ';'
+          }
+          
           compile BKW
           compile PulsarEngine
-
-          echo "objects.txt:"
-          cat objects.txt
-
           OBJECTS=$(cat objects.txt)
-          echo "OBJECTS = $OBJECTS"
-          
-          #for f in $CPPFILES; do
-          #    #echo "Compiling $f..."
-          #    $CC $CFLAGS -c -o "build/${f%.cpp}.o" "$f"
-          #    OBJECTS="build/${f%.cpp}.o" "$OBJECTS"
-          #done
-          
           
           # Link
           echo Linking...
           date -u
-          "./KamekLinker/Kamek.exe" "build/kamek.o" $OBJECTS -dynamic -externals="$GAMESOURCE/symbols.txt" -versions="$GAMESOURCE/versions.txt" -output-combined=build/Code.pul
+          "./KamekLinker/Kamek.exe" "build/kamek.o" $OBJECTS -dynamic -externals="GameSource/symbols.txt" -versions="GameSource/versions.txt" -output-combined=build/Code.pul
           
 
       - name: Upload artifact
