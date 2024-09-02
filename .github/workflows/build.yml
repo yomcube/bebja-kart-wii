@@ -65,8 +65,10 @@ jobs:
 
           find PulsarEngine -type f -name '*.cpp' -exec sh -c '
           echo $1
-          CW/mwcceppc.exe -I- -i KamekInclude -i GameSource -i PulsarEngine -i BKW -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4 -c -o build/${1%.cpp}.o $1
           f=${1##*/}
+          CW/mwcceppc.exe -I- -i KamekInclude -i GameSource -i PulsarEngine -i BKW \
+            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 \
+            -maxerrors 1 -func_align 4 -c -o build/${f%.cpp}.o $1
           echo build/${f%.cpp}.o >> objects.txt' sh '{}' ';'
 
           echo -e "objects.txt:"
