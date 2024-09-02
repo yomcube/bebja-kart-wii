@@ -21,11 +21,8 @@ jobs:
         with:
           path: BKW_
 
-      - name: Checkout Pulsar
-        uses: actions/checkout@v4
-        with:
-          repository: MelgMKW/Pulsar
-          path: Pulsar
+      - name: Clone Pulsar
+        run: git clone https://github.com/MelgMKW/Pulsar Pulsar
           
         
       - name: Get CW
