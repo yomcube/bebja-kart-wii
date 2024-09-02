@@ -53,6 +53,7 @@ jobs:
           cd BKW_
           mv BKW ../Pulsar/BKW
           mv PulsarEngine/Race/200cc.cpp ../Pulsar/PulsarEngine/Race/200cc.cpp
+          mv symbols.txt ../Pulsar/symbols.txt
           cd ../Pulsar
           
           rm -rf build
@@ -92,7 +93,7 @@ jobs:
           # Link
           echo Linking...
           date -u
-          "./KamekLinker/Kamek.exe" "build/kamek.o" $OBJECTS -dynamic -externals="$GAMESOURCE/symbols.txt" -versions="$GAMESOURCE/versions.txt" -output-combined=build/Code.pul
+          "./KamekLinker/Kamek.exe" "build/kamek.o" $OBJECTS -dynamic -externals="symbols.txt" -versions="$GAMESOURCE/versions.txt" -output-combined=build/Code.pul
           
 
       - name: Upload artifact
