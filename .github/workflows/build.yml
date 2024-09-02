@@ -59,11 +59,6 @@ jobs:
               echo "You need to specify the path to CodeWarrior by setting the CC variable"
               exit 1
           fi
-
-          # DEBUG
-          ls
-          # CPP Sources
-          CPPFILES=$(ls BKW/*.cpp) $(ls $PULSAR/**.cpp)
           
           # Compile CPP
           $CC $CFLAGS -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
