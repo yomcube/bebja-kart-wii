@@ -72,8 +72,8 @@ jobs:
           
           :: CPP Sources
           SET CPPFILES=
-          for /R %BKW% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
-          for /R %PULSAR% %%f in (*.cpp) do SET "CPPFILES=%%f !CPPFILES!"
+          for /R %BKW% %%f in (*.cpp) do SET "CPPFILES=!CPPFILES! %%f"
+          for /R %PULSAR% %%f in (*.cpp) do SET "CPPFILES=!CPPFILES! %%f"
           
           :: Compile CPP
           %CC% %CFLAGS% -c -o "build/kamek.o" "%ENGINE%\kamek.cpp"
