@@ -62,17 +62,19 @@ See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2N
 - [ ] That Option to change between Inside and Outside Drift Variety Pack has
 - [ ] The Volume Controls from MKW-SP
     - MKW-SP has an entirely different system than Pulsar.
-- [ ] ***[Extremely large project]*** Local Multiplayer Time Trials
-    - Unrealistic. Nobody has ever made this and will never happen unless someone is willing to make it.
 - [ ] Make ZL Button Wheelie Button
 - [ ] Make Minimap Toggable
 - [ ] Silver trophies (beginner staff ghosts)
 - [ ] Integration with [GhostDB](https://github.com/yomcube/GhostDB/)
     - This won't happen until GhostDB is finished. MKW-SP will have a higher integration priority, so integrating with Pulsar will have to wait until then.
+- [ ] Implement [WiiLink WFC](https://wfc.wiilink24.com)
+- [ ] 
+- [ ] ***[Extremely large project]*** Local Multiplayer Time Trials
+    - Unrealistic. Nobody has ever made this and will never happen unless someone is willing to make it.
+
 
 ### Toggable
 - [ ] CC Changes (Normal, 300CC, 500CC, 1000CC)
 - [ ] Colored Minimaps / Speedometer
 - [ ] An Input Display from MKW-SP
     - MKW-SP has an entirely different system than Pulsar.
-- [ ] Implement [WiiLink WFC](https://wfc.wiilink24.com) 
