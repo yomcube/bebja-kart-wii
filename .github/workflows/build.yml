@@ -20,34 +20,26 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: BKW_
+
+      - name: Checkout Pulsar
+        uses: actions/checkout@v4
+        with:
+          repository: MelgMKW/Pulsar
+          path: Pulsar
+          
         
       - name: Get CW
         run: |
-          mkdir CW
-          curl -o CW/license.dat -fSL ${{ secrets.CW_LINK }}/license.dat
-          curl -o CW/lmgr11.dll -fSL ${{ secrets.CW_LINK }}/lmgr11.dll
-          curl -o CW/mwasmeppc.exe -fSL ${{ secrets.CW_LINK }}/mwasmeppc.exe
-          curl -o CW/mwcceppc.exe -fSL ${{ secrets.CW_LINK }}/mwcceppc.exe
-          curl -o CW/mwldeppc.exe -fSL ${{ secrets.CW_LINK }}/mwldeppc.exe
+          mkdir Pulsar/CW
+          curl -o Pulsar/CW/license.dat -fSL ${{ secrets.CW_LINK }}/license.dat
+          curl -o Pulsar/CW/lmgr11.dll -fSL ${{ secrets.CW_LINK }}/lmgr11.dll
+          curl -o Pulsar/CW/mwasmeppc.exe -fSL ${{ secrets.CW_LINK }}/mwasmeppc.exe
+          curl -o Pulsar/CW/mwcceppc.exe -fSL ${{ secrets.CW_LINK }}/mwcceppc.exe
+          curl -o Pulsar/CW/mwldeppc.exe -fSL ${{ secrets.CW_LINK }}/mwldeppc.exe
 
       - name: Build BKW
         shell: bash
         run: |
-          git clone https://github.com/MelgMKW/Pulsar.git Pulsar
-          mv CW Pulsar/CW
-          cd BKW_
-          mv BKW ../Pulsar/BKW
-          mv PulsarEngine/Race/200cc.cpp ../Pulsar/PulsarEngine/Race/200cc.cpp
-          cd ../Pulsar
-          
-          rm -rf build
-          mkdir build
-          
-          # Compile CPP
-          CW/mwcceppc.exe -I- -i KamekInclude -opt all -inline auto -enum int \
-            -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4 \
-            -c -o "build/kamek.o" "KamekInclude/kamek.cpp"
-
           compile() {
           find $1 -type f -name '*.cpp' -exec sh -c '
             echo $1
@@ -58,14 +50,49 @@ jobs:
             echo -n "build/${f%.cpp}.o " >> objects.txt' sh '{}' ';'
           }
           
+          cd BKW_
+          mv BKW ../Pulsar/BKW
+          mv PulsarEngine/Race/200cc.cpp ../Pulsar/PulsarEngine/Race/200cc.cpp
+          cd ../Pulsar
+          
+          rm -rf build
+          mkdir build
+          
+          ENGINE="KamekInclude"
+          GAMESOURCE="GameSource"
+          PULSAR="PulsarEngine"
+          BKW="BKW"
+          
+          # Change this as necessary depending on where you put CodeWarrior
+          CC="CW/mwcceppc.exe"
+          
+          # Compiler flags and folder
+          CFLAGS="-I- -i $ENGINE -i $GAMESOURCE -i $PULSAR -i $BKW \
+            -opt all -inline auto -enum int -proc gekko -fp hard -sdata 0 -sdata2 0 -maxerrors 1 -func_align 4"
+                    
+          if [ "$CC" == "" ]; then
+              echo "You need to specify the path to CodeWarrior by setting the CC variable"
+              exit 1
+          fi
+          
+          # Compile CPP
+          $CC $CFLAGS -c -o "build/kamek.o" "$ENGINE/kamek.cpp"
+
           compile BKW
           compile PulsarEngine
+
+          echo "objects.txt:"
+          cat objects.txt
+
           OBJECTS=$(cat objects.txt)
+
+          # Symbol stuff
+          sed -i "s/itemBehaviourTable/behaviourTable/g" "$GAMESOURCE/symbols.txt"
           
           # Link
           echo Linking...
           date -u
-          "./KamekLinker/Kamek.exe" "build/kamek.o" $OBJECTS -dynamic -externals="GameSource/symbols.txt" -versions="GameSource/versions.txt" -output-combined=build/Code.pul
+          "./KamekLinker/Kamek.exe" "build/kamek.o" $OBJECTS -dynamic -externals="$GAMESOURCE/symbols.txt" -versions="$GAMESOURCE/versions.txt" -output-combined=build/Code.pul
           
 
       - name: Upload artifact
