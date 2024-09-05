@@ -7,7 +7,8 @@ enum ExtraSettingsType {
 };
 
 enum ExtraSettings {
-    SETTINGBKW_RADIO_DISABLEHUD = 0
+    SETTINGBKW_RADIO_DISABLEHUD = 0,
+    SETTINGBKW_RADIO_MIRRORMODETTS = 1,
 };
 
 } //namespace BKW
