@@ -109,7 +109,7 @@ kmCall(0x807EC68C, DisableHUD);
 
 //Untested; Mirror Mode TTs [vabold], 5.9.24
 		static void MirrorModeTTs() {
-			u8 dis = Pulsar::Settings::Mgr::GetSettingsValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS);
+			u8 dis = Pulsar::Setting::Mgr::GetSettingsValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS);
 			if (dis != 1) {
 				//CodeWrite ASM
 			asm("loc_0x0:"
