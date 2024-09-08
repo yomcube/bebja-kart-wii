@@ -79,6 +79,9 @@ kmWrite32(0x80856A28, 0x48000050);
 //Green/Red Shells Never Break [Hamster35000vr]
 kmWrite32(0x807B5E58, 0x60000000);
 
+//Get Rid of Lakitu [CLF78]
+kmWrite16(0x80535628, 0x4800);
+
 //Mega Mushroom Increased FOV [TheLordScruffy]
 kmCallDefAsm(0x805793AC) {
 	lwz r4, 0(r28)
