@@ -119,6 +119,7 @@ kmCall(0x807EC68C, DisableHUD);
 
 			"loc_0xC:"
 				"stw r7, 2960(r31);"
+				)
 			}
 		}
 		kmCall(0x8053056C, MirrorModeTTs);
