@@ -98,7 +98,13 @@ kmCallDefAsm(0x805793AC) {
 	loc_0x28:
 }
 
-//Disable HUD [Bully]
+// 480p Graphics Fix [Leseratte]
+kmCallDefAsm(0x801BCDDC) {
+	li r3, 3
+	stb r3, 0x0019(r1)
+}
+
+// Disable HUD [Bully]
 static void DisableHUD() {
 	u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_DISABLEHUD);
 	if (dis != 1) {
@@ -107,7 +113,7 @@ static void DisableHUD() {
 }
 kmCall(0x807EC68C, DisableHUD);
 
-//Mirror Mode TTs [vabold]
+// Mirror Mode TTs [vabold]
 static void MirrorModeTTs() {
 	u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS);
 	if (dis == 1) {
