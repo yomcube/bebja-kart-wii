@@ -113,20 +113,5 @@ static void DisableHUD() {
 }
 kmCall(0x807EC68C, DisableHUD);
 
-// Mirror Mode TTs [vabold]
-static void MirrorModeTTs() {
-	u8 dis = Pulsar::Settings::Mgr::GetSettingValue(static_cast<Pulsar::Settings::Type>(SETTINGSTYPE_BKW), SETTINGBKW_RADIO_MIRRORMODETTS);
-	if (dis == 1) {
-		asm(
-			"cmpwi r24,2;"
-			"bne end;"
-			"li r7,1;" /* this flag should always be 0 in TTs */
-			"end:"
-		);
-	}
-	asm("stw r7,0xb90(r31)");
-}
-kmCall(0x8053056C, MirrorModeTTs);
-
 } // namespace MiscCodes
 } // namespace BKW
