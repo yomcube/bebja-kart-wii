@@ -33,7 +33,7 @@ Memory patches are simple to implement, since they can be implemented with a sim
 C2 codes are more difficult to implement than memory patches, since they insert assembly code.
 
 - [x] [480p Graphics Fix [Leseratte]](https://mariokartwii.com/showthread.php?tid=1120)
-- [ ] [BRRES Anti-Flicker [Riidefi]](https://wiki.tockdom.com/wiki/BRRES_Anti-flicker)
+- [x] [BRRES Anti-Flicker [Riidefi]](https://wiki.tockdom.com/wiki/BRRES_Anti-flicker)
 - [ ] [Better Mega Mushroom FOV [TheLordScruffy]](https://mariokartwii.com/showthread.php?tid=1748)
 - [ ] [Enhanced Ghost Replay [MrBean35000vr]](https://mariokartwii.com/showthread.php?tid=108)
 - [ ] [Enhanced Start Line (LE-CODE replica) [Kazuki]](https://mariokartwii.com/showthread.php?tid=1790)
