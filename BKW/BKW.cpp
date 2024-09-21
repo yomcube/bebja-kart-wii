@@ -14,7 +14,7 @@ void BKWPack::AfterInit() {
 	++Pulsar::UI::SettingsPanel::pageCount;
 
 	// Radio button count for new page
-	Pulsar::UI::SettingsPanel::radioButtonCount[SETTINGSTYPE_BKW] = 2;
+	Pulsar::UI::SettingsPanel::radioButtonCount[SETTINGSTYPE_BKW] = 1;
 	// Disable HUD
 	Pulsar::UI::SettingsPanel::buttonsPerPagePerRow[SETTINGSTYPE_BKW][0] = 2;
 
