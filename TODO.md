@@ -34,7 +34,7 @@ C2 codes are more difficult to implement than memory patches, since they insert 
 
 - [x] [480p Graphics Fix [Leseratte]](https://mariokartwii.com/showthread.php?tid=1120)
 - [ ] [BRRES Anti-Flicker [Riidefi]](https://wiki.tockdom.com/wiki/BRRES_Anti-flicker)
-- [ ] [Better Mega Mushroom FOV [TheLordScruffy]](https://mariokartwii.com/showthread.php?tid=1748)
+- [x] [Better Mega Mushroom FOV [TheLordScruffy]](https://mariokartwii.com/showthread.php?tid=1748)
 - [ ] [Enhanced Ghost Replay [MrBean35000vr]](https://mariokartwii.com/showthread.php?tid=108)
 - [ ] [Enhanced Start Line (LE-CODE replica) [Kazuki]](https://mariokartwii.com/showthread.php?tid=1790)
 - [ ] [Items on Minimap [stebler]](https://mariokartwii.com/showthread.php?tid=1896)
