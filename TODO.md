@@ -1,7 +1,7 @@
 # bebja-kart-wii
 
 ## Unsorted
-
+- [ ] [Select any Mii in Character Selection Screen [B_squo]](https://www.youtube.com/watch?v=-DFlM06zqI8)
 
 ## Simple Memory Patches
 Memory patches are simple to implement, since they can be implemented with a simple `kmWriteX`, where `X` is the type of integer that the code patches.
