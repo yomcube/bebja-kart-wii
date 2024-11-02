@@ -65,10 +65,10 @@ See [the spreadsheet](https://docs.google.com/spreadsheets/d/1AmkPai7Njxma21Xr2N
 - [ ] That Option to change between Inside and Outside Drift Variety Pack has
 - [ ] The Volume Controls from MKW-SP
 	- MKW-SP has an entirely different system than Pulsar.
-- [ ] [TTs Online](https://wiki.tockdom.com/wiki/TTs_Online)
+- [x] [TTs Online](https://wiki.tockdom.com/wiki/TTs_Online)
 - [ ] **[Large project]** Custom Wii Channel
 - [ ] **[Large project]** Homebrew Updater (Like OptPack)
-- [ ] ***[Extremely large project]*** Local Multiplayer Time Trials
+- [x] ***[Extremely large project]*** Local Multiplayer Time Trials
     - Unrealistic. Nobody has ever made this and will never happen unless someone is willing to make it.
 
 
